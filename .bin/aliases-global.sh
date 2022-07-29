@@ -1,3 +1,4 @@
+alias sysyadm="sudo yadm --yadm-dir /etc/yadm --yadm-data /etc/yadm/data"
 alias backup="echo 'this is not nas - ssh in and run backup'"
 alias checkrr="find . -type f -not -name \"*-*-*.*\""
 alias chgrp="chgrp -c"
