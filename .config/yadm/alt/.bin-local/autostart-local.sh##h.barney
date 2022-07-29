@@ -1,5 +1,6 @@
 #!/bin/sh
-$HOME/Scripts/OtherEssentialFiles/global/autostart.sh &
+
+$HOME/.bin/autostart-global.sh &
 
 function run {
   if ! pgrep -f $1 ;
