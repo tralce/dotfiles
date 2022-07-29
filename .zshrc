@@ -166,7 +166,7 @@ PROMPT="${rngstatus}%F{$strcolor}%n%F{cyan}@%F{green}%m%F{blue} %~ ${ret_status}
 # tmux and splash {{{
 if [[ $- =~ i ]]
 then
-  [ -f $HOME/Scripts/tmux_or_screen.sh ] && $HOME/Scripts/tmux_or_screen.sh
+  [ -f $HOME/.bin/tmux_or_screen.sh ] && $HOME/.bin/tmux_or_screen.sh
   echocolor cyan "$zshrcver on $(uname -srm) $(uptime -p 2> /dev/null || uptime)"
 fi
 # }}}

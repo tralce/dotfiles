@@ -110,7 +110,7 @@ end
 if which nnn &> /dev/null
   alias nnn="nnn -P p"
   set -x O_ICONS 1
-  set -x NNN_BMS "L:~/SourceSoftware/LinuxStuff/arch;S:~/Scripts"
+  set -x NNN_BMS "L:~/SourceSoftware/LinuxStuff/arch;S:~/.bin"
   set -x NNN_TRASH 1
   set -x NNN_COLORS 4321
   set -x NNN_PLUG 'p:preview-tui;f:finder;d:diffs;i:ipinfo;o:oldbigfilei;u:_ncdu $nnn*;O:organize;x:_aunpack $nnn'
@@ -138,7 +138,7 @@ for newpath in \
     fish_add_path -am $newpath
   end
 end
-#$HOME/Scripts/OtherEssentialFiles/path.sh|while read pathdir
+#$HOME/.bin/OtherEssentialFiles/path.sh|while read pathdir
 #  if not contains $pathdir $PATH
 #    set -g PATH $PATH $pathdir
 #  end
@@ -232,7 +232,7 @@ test -e $HOME/.bin-local/aliases-local.sh;and source $HOME/.bin-local/aliases-lo
 # }}}
 
 # tmux and splash {{{
-status is-interactive;and test "$TERM != linux";and ~/Scripts/tmux_or_screen.sh
+status is-interactive;and test "$TERM != linux";and ~/.bin/tmux_or_screen.sh
 
 set fish_greeting (set_color $tc_orang)$configver on (uname -srm) (uptime -p 2> /dev/null; or uptime)
 # }}}
