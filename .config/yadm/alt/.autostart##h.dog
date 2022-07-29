@@ -1,0 +1,16 @@
+#!/bin/bash
+
+$HOME/Scripts/OtherEssentialFiles/global/autostart.sh &
+
+function run {
+  if ! pgrep -f $1 ;
+  then
+    $@&
+  fi
+}
+
+run flameshot
+run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
+run synergyc 172.21.2.3
+
+run keep-presence -r 5 15 -c

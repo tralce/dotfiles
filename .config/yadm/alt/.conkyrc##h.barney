@@ -1,0 +1,60 @@
+conky.config = {
+  alignment = 'top_right',
+  background = true,
+  cpu_avg_samples = 2,
+  default_color = '#ff44aa',
+  default_outline_color = '#202020',
+  default_shade_color = '#202020',
+  double_buffer = true,
+  draw_borders = false,
+  draw_graph_borders = true,
+  draw_outline = true,
+  draw_shades = false,
+  gap_x = 5,
+  gap_y = 25,
+  minimum_width = 340,
+  minimum_height = 989,
+  no_buffers = true,
+  override_utf8_locale = true,
+  own_window = true,
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  own_window_transparent = true,
+  own_window_type = 'override',
+  total_run_times = 0,
+  update_interval = 1.0,
+  uppercase = false,
+  use_xft = true,
+  font = 'Ubuntu Mono:size=10',
+
+};
+
+conky.text = [[
+SYSTEM ${hr 1}
+Time:$alignr${time %a %b %e %Y %I:%M:%S %P}
+Load / Uptime: $alignr$loadavg / $uptime
+Updates:${alignr}${execi 60 checkupdates|wc -l}, ${execi 60 ~/Scripts/checkreboot.sh}
+Trash: ${alignr}${execi 30 bash -c 'du -hs --total ~/.local/share/Trash/files $HOME/*/.Trash-* /media/*/.Trash-* ~/.Trash /Volumes/*/.Trash-*' 2>/dev/null|grep total|cut -f1}
+Bat: ${alignr}${execi 5 acpi|sed -e "s/Battery 0: //g"}
+
+CPU ${alignr}${cpu cpu0}%
+${cpubar cpu0 4}
+RAM${alignr}$mem / $memmax ($memperc%)
+${membar 4}
+
+Highest CPU users $alignr CPU%
+${top name 1}$alignr${top cpu 1}
+${top name 2}$alignr${top cpu 2}
+${top name 3}$alignr${top cpu 3}
+
+NETWORK $alignr wlan0 - ${addr wlan0}
+Down ${downspeed wlan0}/s ${alignr}Up ${upspeed wlan0}/s
+${downspeedgraph wlan0 25,185} ${alignr}${upspeedgraph wlan0 25,185}
+Total ${totaldown wlan0} ${alignr}Total ${totalup wlan0}
+
+FILESYSTEM ${hr 1}
+/: (T: ${fs_size /}) (U: ${fs_used /}) (F: ${fs_free /})
+${fs_bar 4 /}
+
+${exec ~/Scripts/freespace.sh}
+
+]];

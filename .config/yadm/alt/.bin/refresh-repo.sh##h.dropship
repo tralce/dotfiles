@@ -1,0 +1,4 @@
+#!/bin/bash
+repo-add -R /home/tralce/x86_64/tralce.db.tar.gz /home/tralce/x86_64/*.zst
+chown -R tralce:users /home/tralce/x86_64
+# aws s3 sync --delete /home/tralce/x86_64 s3://repo.tralce.com/tralce/x86_64/

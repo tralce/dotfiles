@@ -1,0 +1,42 @@
+#!/bin/bash
+
+compl() {
+  notify-send "$(basename $0)" "Output switched to ${@}."
+  exit 0
+}
+
+fail() {
+  notify-send "$(basename $0)" "Something went wrong."
+  exit 1
+}
+
+switch_headset() {
+  # pacmd set-card-profile 3 output:analog-stereo+input:mono-fallback
+  #pacmd set-card-profile 2 output:iec958-stereo+input:analog-stereo
+#  pacmd set-default-sink alsa_output.usb-Logitech_G533_Gaming_Headset-00.analog-stereo
+  pacmd set-default-sink alsa_output.usb-Logitech_G533_Gaming_Headset-00.iec958-stereo
+  compl "Logitech Headset"
+}
+
+switch_soundbar() {
+  #pacmd set-card-profile 2 output:analog-stereo
+  pacmd set-default-sink alsa_output.pci-0000_08_00.3.analog-stereo
+  compl "Sound Bar"
+}
+
+toggle() {
+  if [ $(pactl get-default-sink) = "alsa_output.pci-0000_08_00.3.analog-stereo" ]
+  then
+    switch_headset
+  else
+    switch_soundbar
+  fi
+}
+
+case $1 in
+  soundbar) switch_soundbar;;
+  headset)  switch_headset;;
+  toggle)   toggle;;
+esac
+
+fail

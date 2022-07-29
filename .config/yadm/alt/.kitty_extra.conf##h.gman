@@ -1,0 +1,4 @@
+# vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+font_size 12.1
+background_opacity 0.75
+enable_audio_bell no

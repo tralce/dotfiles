@@ -1,0 +1,23 @@
+section: screens
+  alyx:
+  judith:
+  barney:
+end
+
+section: aliases
+end
+
+section: links
+  judith:
+    right = barney
+  alyx:
+    left = barney
+  barney:
+    right = alyx
+    left = judith
+end
+
+section: options
+	relativeMouseMoves = true
+end
+

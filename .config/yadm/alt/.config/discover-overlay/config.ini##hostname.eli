@@ -1,0 +1,31 @@
+[main]
+rightalign = 1
+topalign = 0
+bg_col = [0.0, 0.0, 0.0, 0.5]
+fg_col = [0.23921568627450981, 0.2196078431372549, 0.27450980392156865, 1.0]
+tk_col = [0.0, 0.7, 0.0, 1.0]
+mt_col = [0.6, 0.0, 0.0, 1.0]
+hi_col = [0.0, 0.0, 0.0, 0.5]
+fg_hi_col = [1.0, 1.0, 1.0, 1.0]
+bo_col = [0.0, 0.0, 0.0, 0.0]
+avatar_size = 25
+icon_spacing = 6
+text_padding = 6
+text_baseline_adj = 0
+square_avatar = 0
+only_speaking = 0
+highlight_self = 0
+icon_only = 0
+monitor = None
+vert_edge_padding = 27
+horz_edge_padding = 0
+floating = 0
+floating_x = 0
+floating_y = 0
+floating_w = 400
+floating_h = 400
+order = 0
+horizontal = False
+guild_ids = 
+overflow = 2
+

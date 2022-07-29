@@ -1,0 +1,5 @@
+"~/.bin/sound-output.sh toggle"
+  m:0x50 + c:42
+
+"~/.bin/sound-output.sh nari"
+  m:0x51 + c:42

@@ -1,0 +1,12 @@
+[geometry]
+posx=1287
+posy=55
+sizex=2543
+sizey=2095
+
+[nitrogen]
+view=icon
+recurse=true
+sort=alpha
+icon_caps=false
+dirs=/home/dhadley/Pictures/Wallpapers;
