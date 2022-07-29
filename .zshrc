@@ -60,7 +60,20 @@ then
   alias lst="lsd -lS --total-size"
 fi # }}}
 # path {{{
-for newpath in $(cat ~/.path)
+for newpath in \
+  /usr/local/bin \
+  /usr/bin \
+  /bin \
+  /usr/sbin \
+  /sbin \
+  $HOME/.bin-local \
+  $HOME/.bin-local \
+  $HOME/.bin \
+  /var/lib/snapd/snap/bin \
+  /usr/local/opt/coreutils/libexec/gnubin \
+  $HOME/.local/share/gem/ruby/3.0.0/bin \
+  $HOME/.local/bin \
+  /home/linuxbrew/.linuxbrew/bin
 do
   if [ -d "$newpath" ]
   then
