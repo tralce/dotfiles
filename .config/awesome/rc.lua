@@ -55,10 +55,10 @@ beautiful.useless_gap = 5
 beautiful.gap_single_client = false
 
 -- This is used later as the default terminal and editor to run.
-terminal = "bash -c ~/Scripts/launchers/terminal.sh"
+terminal = "bash -c ~/.bin/launch-terminal.sh"
 launchtool = "rofi -show run"
-browser = "bash -c ~/Scripts/launchers/browser.sh"
-filemanager = "bash -c ~/Scripts/launchers/filemanager.sh"
+browser = "bash -c ~/.bin/launch-browser.sh"
+filemanager = "bash -c ~/.bin/launch-filemanager.sh"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
