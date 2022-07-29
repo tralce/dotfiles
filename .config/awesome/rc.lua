@@ -117,7 +117,7 @@ mylauncher = awful.widget.launcher({
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
-awful.spawn.with_shell("~/.autostart")
+awful.spawn.with_shell("~/.bin-local/autostart-local.sh")
 
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()

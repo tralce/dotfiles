@@ -3,9 +3,9 @@
 
 bashrcver="v2021-09-14"
 
-. $HOME/Scripts/src/src.sh
-. $HOME/.bin/aliases_global.sh
-[ -f $HOME/.aliases.sh ] && . $HOME/.aliases.sh
+. $HOME/.bin/src.sh
+. $HOME/.bin/aliases-global.sh
+[ -f $HOME/.bin-local/aliases-local.sh ] && . $HOME/.bin-local/aliases-local.sh
 
 alias fuck='sudo $(fc -nl -1)'
 
@@ -37,6 +37,8 @@ for newpath in \
   /bin \
   /usr/sbin \
   /sbin \
+  $HOME/.bin-local \
+  $HOME/.bin \
   $HOME/Scripts/OtherEssentialFiles/$(hostname -s)/scripts \
   $HOME/Scripts \
   $HOME/Scripts/former_functions \

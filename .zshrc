@@ -3,10 +3,10 @@
 
 zshrcver="v2021-09-14"
 
-source $HOME/Scripts/src/src.sh
-source $HOME/.bin/aliases_global.sh
+source $HOME/.bin/src.sh
+source $HOME/.bin/aliases-global.sh
 source ~/.zkbd/zkbd
-[ -f $HOME/.aliases.sh ] && . $HOME/.aliases.sh
+[ -f $HOME/.bin-local/aliases-local.sh ] && . $HOME/.bin-local/aliases-local.sh
 
 # completion {{{
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
@@ -66,6 +66,8 @@ for newpath in \
   /bin \
   /usr/sbin \
   /sbin \
+  $HOME/.bin-local \
+  $HOME/.bin \
   $HOME/Scripts/OtherEssentialFiles/$(hostname -s)/scripts \
   $HOME/Scripts/former_functions \
   $HOME/Scripts/launchers \

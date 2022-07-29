@@ -126,6 +126,7 @@ for newpath in \
   /bin \
   /usr/sbin \
   /sbin \
+  $HOME/.bin-local \
   $HOME/.bin \
   $HOME/Scripts/OtherEssentialFiles/(hostname -s)/scripts \
   $HOME/Scripts \
@@ -229,9 +230,9 @@ bind \cg resolve_command # }}}
 # Aliases {{{
   alias fuck='eval sudo $history[1]'
 
-test -e $HOME/.bin/aliases_global.sh;and source $HOME/.bin/aliases_global.sh
+test -e $HOME/.bin/aliases-global.sh;and source $HOME/.bin/aliases-global.sh
 
-test -e $HOME/.aliases.sh;and source $HOME/.aliases.sh
+test -e $HOME/.bin-local/aliases-local.sh;and source $HOME/.bin-local/aliases-local.sh
 # }}}
 
 # tmux and splash {{{
