@@ -120,24 +120,7 @@ if which nnn &> /dev/null
   set -x USE_SCOPE 0
 end # }}}
 # path {{{
-for newpath in \
-  /usr/local/bin \
-  /usr/bin \
-  /bin \
-  /usr/sbin \
-  /sbin \
-  $HOME/.bin-local \
-  $HOME/.bin \
-  $HOME/Scripts/OtherEssentialFiles/(hostname -s)/scripts \
-  $HOME/Scripts \
-  $HOME/Scripts/former_functions \
-  $HOME/Scripts/launchers \
-  /var/lib/snapd/snap/bin \
-  /usr/local/opt/coreutils/libexec/gnubin \
-  $HOME/.local/share/gem/ruby/3.0.0/bin \
-  $HOME/.local/bin \
-  /home/linuxbrew/.linuxbrew/bin \
-  /usr/local/bin
+for newpath in $(cat ~/.path)
   if test -d $newpath
     fish_add_path -am $newpath
   end

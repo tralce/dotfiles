@@ -31,23 +31,7 @@ then
 fi # }}}
 
 # path {{{
-for newpath in \
-  /usr/local/bin \
-  /usr/bin \
-  /bin \
-  /usr/sbin \
-  /sbin \
-  $HOME/.bin-local \
-  $HOME/.bin \
-  $HOME/Scripts/OtherEssentialFiles/$(hostname -s)/scripts \
-  $HOME/Scripts \
-  $HOME/Scripts/former_functions \
-  $HOME/Scripts/launchers \
-  /var/lib/snapd/snap/bin \
-  $HOME/.local/share/gem/ruby/3.0.0/bin \
-  /home/linuxbrew/.linuxbrew/bin \
-  ~/.local/bin \
-  /usr/local/opt/coreutils/libexec/gnubin
+for newpath in $(cat ~/.path)
 do
   if [ -d "$newpath" ]
   then
