@@ -8,7 +8,7 @@ version="v2021-05-06"
 
 trap "bye 1" INT
 
-source ~/Scripts/src/src.sh
+source ~/.bin/src.sh
 
 tout="1000ms"
 counter=0
