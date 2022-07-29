@@ -1,0 +1,5 @@
+[user]
+	email = dan@tralce.com
+	name = tralce
+[init]
+	defaultBranch = master
