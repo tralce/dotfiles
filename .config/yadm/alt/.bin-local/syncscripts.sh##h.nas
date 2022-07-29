@@ -10,7 +10,7 @@ mode="-auto"
 ia=""
 perms=
 
-source ~/Scripts/src/src.sh
+source ~/.bin/src.sh
 
 trap exit 1 INT
 

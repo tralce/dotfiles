@@ -26,8 +26,6 @@ alias sdnow="checkroot systemctl --now disable"
 alias senow="checkroot systemctl --now enable"
 alias shred="shred -vun50"
 alias sync_size="watch grep -e Dirty: -e Writeback: /proc/meminfo"
-alias syncscripts-I="unison -terse -ui text -auto -ignorearchives ssh://tralce@eclart.xyz:222//home/tralce/Scripts $HOME/Scripts"
-alias syncscripts="unison -terse -ui text -auto ssh://tralce@eclart.xyz:222//home/tralce/Scripts $HOME/Scripts"
 alias tb="nc tb.tralce.com 9999"
 alias tmin='bash -c "TRUST= $(curl http://sc.tralce.com/minimal.sh)"'
 alias tmx="tmux_or_screen.sh"
