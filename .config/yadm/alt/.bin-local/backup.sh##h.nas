@@ -183,7 +183,7 @@ do_gman() {
   ips=(172.21.2.2)
   ports=(22)
   user="tralce"
-  runBackup .aws .gnupg Documents Downloads ISOs Pictures Scripts SourceSoftware
+  runBackup Documents Downloads ISOs Pictures Scripts SourceSoftware
 }
 
 do_barney() {
@@ -191,7 +191,7 @@ do_barney() {
   ips=(172.21.2.20)
   ports=(22)
   user="tralce"
-  runBackup .aws .gnupg Documents Downloads Pictures/Wallpapers Scripts
+  runBackup Documents Downloads Pictures/Wallpapers Scripts
 }
 
 do_judith() {
@@ -199,7 +199,7 @@ do_judith() {
   ips=(172.21.2.16 172.21.2.17)
   ports=(22)
   user="dhadley"
-  runBackup .aws .gnupg Documents Downloads ISOs Pictures/Wallpapers Scripts
+  runBackup Documents Downloads ISOs Pictures/Wallpapers Scripts
 }
 
 do_alyx() {
@@ -208,7 +208,7 @@ do_alyx() {
   ports=(22 48000)
   user="tralce"
   dirWin="y:"
-  runBackup .aws .gnupg Desktop Documents Downloads ESO ISOs MiscBackups Pictures Scripts SourceSoftware
+  runBackup Documents Downloads ESO ISOs MiscBackups Pictures Scripts SourceSoftware
 }
 
 do_adrian() {
@@ -219,7 +219,7 @@ do_adrian() {
   user=tralce
   optExtra="-servercmd /usr/local/bin/unison"
   optPerms=""
-  runBackup Desktop Documents Downloads ISOs Music/Music Pictures Scripts SourceSoftware
+  runBackup Documents Downloads ISOs Music/Music Pictures Scripts SourceSoftware
 }
 
 do_dog() {
@@ -236,7 +236,7 @@ do_odessa() {
   ports=(22 48000)
   user="nhadley"
   filebase="$HOME/OtherPeoplesBackups/Nicole"
-  runBackup Desktop Documents Downloads Music Pictures Videos
+  runBackup Documents Downloads Music Pictures Videos
   friendlyName="odessa"
   runBackup ESO Pictures/Wallpapers Scripts
 }
@@ -254,7 +254,7 @@ do_eli() {
   ips=(172.21.2.3)
   ports=(22 48000)
   user="tralce"
-  runBackup .aws .gnupg Desktop Documents Downloads ESO ISOs Pictures Scripts SourceSoftware USB_Toolkits Videos ventoy
+  runBackup Documents Downloads ESO ISOs Pictures Scripts SourceSoftware USB_Toolkits Videos ventoy
 }
 
 do_isaac() {
@@ -263,7 +263,7 @@ do_isaac() {
   ports=(22 48000)
   user="nhadley"
   filebase="$HOME/OtherPeoplesBackups/Nicole"
-  runBackup Desktop Documents Downloads Music Pictures Videos
+  runBackup Documents Downloads Music Pictures Videos
   friendlyName="isaac"
   runBackup ESO Pictures/Wallpapers Scripts
 }
