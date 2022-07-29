@@ -1,0 +1,23 @@
+#!/bin/bash
+$HOME/Scripts/OtherEssentialFiles/global/autostart.sh &
+
+function run {
+  if ! pgrep -f $1 ;
+  then
+    $@&
+  fi
+}
+
+synclient HorizScrollDelta=-30
+synclient VertScrollDelta=-30
+
+run picom -cCGb -i 0.95 --vsync --backend glx
+#run barrierc --disable-crypto 172.21.2.4
+run nm-applet
+run pa-applet
+run steam -silent
+run cbatticon
+run flameshot
+run discord --start-minimized
+
+(while true;do razer.py;sleep 15;done) &

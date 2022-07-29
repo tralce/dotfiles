@@ -1,0 +1,48 @@
+#!/bin/bash
+
+compl() {
+  notify-send "$(basename $0)" "Output switched to ${@}."
+  exit 0
+}
+
+fail() {
+  notify-send "$(basename $0)" "Something went wrong."
+  exit 1
+}
+
+switch_nari() {
+  pacmd set-card-profile 2 output:analog-chat+output:analog-game+input:analog-chat
+  pacmd set-default-sink alsa_output.usb-Razer_Razer_Nari_Ultimate-00.analog-game
+  compl "Razer Nari Ultimate"
+}
+
+switch_tv() {
+  pacmd set-card-profile 0 output:hdmi-stereo-extra3
+  pacmd set-default-sink alsa_output.pci-0000_26_00.1.hdmi-stereo-extra3
+  compl "JBL Sound Bar"
+}
+
+switch_monitor() {
+  pacmd set-card-profile 0 output:hdmi-stereo-extra2
+  pacmd set-default-sink alsa_output.pci-0000_26_00.1.hdmi-stereo-extra2
+  compl "HP Monitor"
+}
+
+toggle() {
+  if [ $(pactl get-default-sink) = "alsa_output.pci-0000_26_00.1.hdmi-stereo-extra3" ]
+  then
+    switch_monitor
+  else
+  #elif [ $(pactl get-default-sink) = "alsa_output.pci-0000_26_00.1.hdmi-stereo-extra2" ]
+    switch_tv
+  fi
+}
+
+case $1 in
+  monitor)  switch_monitor;;
+  tv)       switch_tv;;
+  nari)     switch_nari;;
+  toggle)   toggle;;
+esac
+
+fail

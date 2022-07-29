@@ -1,0 +1,21 @@
+#!/bin/sh
+$HOME/Scripts/OtherEssentialFiles/global/autostart.sh &
+
+function run {
+  if ! pgrep -f $1 ;
+  then
+    $@&
+  fi
+}
+
+xinput set-prop $(xinput list|grep Touchpad|cut -f2|sed "s/id=//g") 286 1
+xgamma -rgamma 1.1
+xgamma -bgamma 0.8
+
+run picom -cCGb -i 0.95 -m 0.95 --vsync --backend glx
+run synergyc 172.21.2.3
+run nm-applet
+run pa-applet
+run flameshot
+run cbatticon
+run numlockx
