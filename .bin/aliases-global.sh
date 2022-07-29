@@ -40,5 +40,4 @@ alias wasabidgc="aws --profile wasabi-dgc --endpoint-url=https://s3.wasabisys.co
 alias whatismyip="dig +short myip.opendns.com @resolver1.opendns.com"
 test -f /etc/issue && alias piversion="grep -q Revision /proc/cpuinfo && curl -L perturb.org/rpi?rev=$(awk '/^Revision/ { print $3 }' /proc/cpuinfo)"
 test -f ~/.acme.sh/acme.sh && alias acme.sh="~/.acme.sh/acme.sh"
-test -f ~/Documents/binaries/startvpn.sh && alias startvpn="bash ~/Documents/binaries/startvpn.sh"
 test -f ~/topgrade && alias topgrade="~/topgrade"
