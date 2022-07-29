@@ -1,0 +1,16 @@
+[General]
+buttons=@Invalid()
+contrastOpacity=188
+drawColor=#ff0055
+saveAsFileExtension=png
+saveLastRegion=true
+savePath=/home/tralce
+savePathFixed=false
+showHelp=false
+showMagnifier=true
+showSelectionGeometryHideTime=3006
+showStartupLaunchMessage=false
+squareMagnifier=false
+startupLaunch=true
+uiColor=#ff0055
+userColors=picker, #ff0055, #ff0000, #00ff00, #0000ff
