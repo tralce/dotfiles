@@ -1,0 +1,65 @@
+#!/bin/zsh
+# vim: filetype=sh
+# jpg2mp4.sh by tralce v2018.09.26.0
+# depends: zsh, ffmpeg, and any sane sendmail provider
+
+trap exit INT
+setopt extended_glob
+zmodload -Fm zsh/files b:zf_\*
+
+mail=0
+starttime=$(date +%s)
+ydate=$(date --date="yesterday" +%Y%m%d)
+rootdir="/srv/cam"
+thread=""
+ctype=""
+delete="false"
+a=0
+savedir="`date --date="yesterday" +%Y`/`date --date="yesterday" +%m`/`date --date="yesterday" +%d`"
+
+usage() {
+  echo "Usage:"
+  echo -e "jpg2mpg.sh -t thread# -c capturetype [-T / -d yyyymmdd] [-D]"
+  echo -e "-t thread#\tThread number, i.e. thread1"
+  echo -e "-c capturetype\t\"snapshot\" or \"motion\""
+  echo -e "-d yyyymmdd\tOperate on files from date yyyymmdd"
+  echo -e "-T\t\tOperate on files from today"
+  echo -e "-D\t\tDelete hardlinks and original jpgs"
+  echo -e "If neither -T or -d are specified, assume date to operate on\nis yesterday."
+  exit 1
+}
+
+while getopts "t:c:d:DTh" arg
+do
+  case $arg in
+    t)	thread="$OPTARG";;
+    c)	ctype="$OPTARG";;
+    d)	ydate="$OPTARG";;
+    T)	ydate="$(date +%Y%m%d)";;
+    D)	delete="true";;
+    *)	usage;;
+  esac
+done
+shift $(( OPTIND - 1 ))
+
+[ -z "$thread" ] && usage
+[ -z "$ctype" ] && usage
+
+date
+du -hs $rootdir/frames/$thread/$ctype
+pushd $rootdir/frames/$thread/$ctype
+echo "Hardlinking...";
+for i in ??/$ydate-*.jpg; do
+  new=$(printf "%08d.jpg" ${a}) #08 pad to length of 8
+  ln ${i} ${new}
+  let a=a+1
+done
+echo "Hardlinked $a frames in $rootdir/frames/$thread/$ctype/";
+ffmpeg -r 120 -i %08d.jpg -vcodec libx265 -crf 27 $ydate-$thread-$ctype.mp4 && echo "Saved $ydate-$thread-$ctype.mp4 successfully."
+[ ! -d "$rootdir/videos/$savedir/" ] && mkdir -p $rootdir/videos/$savedir/
+mv --backup=simple --suffix=.old $ydate-$thread-$ctype.mp4 $rootdir/videos/$savedir/
+popd
+zf_rm $rootdir/frames/$thread/$ctype/????????.jpg
+[ "$delete" = "true" ] && zf_rm $rootdir/frames/$thread/$ctype/??/$ydate-*.jpg
+[ "$delete" = "true" ] && rmdir $rootdir/frames/$thread/$ctype/??
+

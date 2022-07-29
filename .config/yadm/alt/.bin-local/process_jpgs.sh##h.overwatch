@@ -1,0 +1,30 @@
+#!/bin/bash
+# v2016.02.05.0
+
+help_thing() {
+  echo "This script must be invoked as \"$(basename $0) -c\" and is designed to be started by cron."
+}
+
+do_the_thing() {
+  echo "Started on $(date)"
+  /home/tralce/Scripts/OtherEssentialFiles/overwatch/scripts/jpg2mp4.sh -t thread1 -c snapshot -D &>> /home/tralce/logs/jpg2mp4-thread1-snapshot.log
+  /home/tralce/Scripts/OtherEssentialFiles/overwatch/scripts/jpg2mp4.sh -t thread2 -c snapshot -D &>> /home/tralce/logs/jpg2mp4-thread2-snapshot.log
+  #/home/tralce/Scripts/OtherEssentialFiles/overwatch/scripts/jpg2mp4.sh -t thread3 -c snapshot -D &>> /home/tralce/logs/jpg2mp4-thread3-snapshot.log
+  /home/tralce/Scripts/OtherEssentialFiles/overwatch/scripts/jpg2mp4.sh -t thread4 -c snapshot -D &>> /home/tralce/logs/jpg2mp4-thread4-snapshot.log
+  /home/tralce/Scripts/OtherEssentialFiles/overwatch/scripts/jpg2mp4.sh -t thread1 -c motion -D &>> /home/tralce/logs/jpg2mp4-thread1-motion.log
+  /home/tralce/Scripts/OtherEssentialFiles/overwatch/scripts/jpg2mp4.sh -t thread2 -c motion -D &>> /home/tralce/logs/jpg2mp4-thread2-motion.log
+  #/home/tralce/Scripts/OtherEssentialFiles/overwatch/scripts/jpg2mp4.sh -t thread3 -c motion -D &>> /home/tralce/logs/jpg2mp4-thread3-motion.log
+  /home/tralce/Scripts/OtherEssentialFiles/overwatch/scripts/jpg2mp4.sh -t thread4 -c motion -D &>> /home/tralce/logs/jpg2mp4-thread4-motion.log
+  echo "Finished on $(date)"
+}
+
+while getopts "c" arg
+do
+  case $arg in
+    c)	do_the_thing
+      exit 0;;
+  esac
+done
+
+help_thing
+exit 1
