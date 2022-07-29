@@ -1,0 +1,10 @@
+[Unit]
+Description=disk automounter
+
+[Service]
+Type=simple
+StandardOutput=journal
+ExecStart=%h/Scripts/diskmount.sh
+
+[Install]
+WantedBy=default.target
