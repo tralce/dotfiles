@@ -786,4 +786,5 @@ map     cvj     shell conv.sh -e jpg %s
 map     cvg     shell conv.sh -e gif %s
 map     cvm     shell conv.sh -e mp4 %s
 map     yA      shell yadm add %s
+map     rP      shell chmod -R a-x+X,ug+rw,o-w+r %s
 
