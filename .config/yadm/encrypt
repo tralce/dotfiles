@@ -2,6 +2,6 @@
 .bin-trust/*
 .config/topgrade-all.toml
 .gnupg
-.ssh/*.pem
+.ssh/pem/*
 .ssh/config-*
 .vpn_configs/*
