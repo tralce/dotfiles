@@ -1,0 +1,21 @@
+# vim: ft=sh
+if test -d ~/prod
+then
+  projectdir="~/prod"
+elif test -d ~/staging
+then
+  projectdir="~/staging"
+fi
+
+if [ -n "$projectdir" ]
+then
+  alias dcdown="docker-compose -f $projectdir/docker-compose.yaml down"
+  alias dckill="docker-compose -f $projectdir/docker-compose.yaml kill"
+  alias dclogs="docker-compose -f $projectdir/docker-compose.yaml logs"
+  alias dcpull="docker-compose -f $projectdir/docker-compose.yaml pull"
+  alias dcpurge="docker system prune -a --volumes"
+  alias dcrestart="docker-compose -f $projectdir/docker-compose.yaml restart"
+  alias dcstart="docker-compose -f $projectdir/docker-compose.yaml start"
+  alias dcstop="docker-compose -f $projectdir/docker-compose.yaml stop"
+  alias dcup="docker-compose -f $projectdir/docker-compose.yaml up -d"
+fi
