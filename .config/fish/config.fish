@@ -229,6 +229,7 @@ bind \cg resolve_command # }}}
 test -e $HOME/.bin/aliases-global.sh;and source $HOME/.bin/aliases-global.sh
 
 test -e $HOME/.bin-local/aliases-local.sh;and source $HOME/.bin-local/aliases-local.sh
+test -e $HOME/.bin-trust/aliases-trust.sh;and source $HOME/.bin-trust/aliases-trust.sh
 # }}}
 
 # tmux and splash {{{

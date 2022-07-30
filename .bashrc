@@ -6,6 +6,7 @@ bashrcver="v2021-09-14"
 . $HOME/.bin/src.sh
 . $HOME/.bin/aliases-global.sh
 [ -f $HOME/.bin-local/aliases-local.sh ] && . $HOME/.bin-local/aliases-local.sh
+[ -f $HOME/.bin-trust/aliases-trust.sh ] && . $HOME/.bin-trust/aliases-trust.sh
 
 alias fuck='sudo $(fc -nl -1)'
 

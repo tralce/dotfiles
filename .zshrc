@@ -7,6 +7,7 @@ source $HOME/.bin/src.sh
 source $HOME/.bin/aliases-global.sh
 source ~/.zkbd/zkbd
 [ -f $HOME/.bin-local/aliases-local.sh ] && . $HOME/.bin-local/aliases-local.sh
+[ -f $HOME/.bin-trust/aliases-trust.sh ] && . $HOME/.bin-trust/aliases-trust.sh
 
 # completion {{{
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
