@@ -61,7 +61,7 @@ disable = ["firmware"]
 # Custom commands
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
-"sysyadm" = "sudo yadm --yadm-dir /etc/yadm --yadm-data /etc/yadm/data pull"
+#"sysyadm" = "sudo yadm --yadm-dir /etc/yadm --yadm-data /etc/yadm/data pull"
 
 [brew]
 #greedy_cask = true
