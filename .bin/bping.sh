@@ -17,7 +17,7 @@ If multiple hosts or IPs are specified, they will be pinged in
 order.
 "
 
-source ~/Scripts/src/src.sh
+source ~/.bin/src.sh
 
 cnt=1
 delay="1"

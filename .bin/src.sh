@@ -1,5 +1,4 @@
 #!/bin/bash
-# source ~/Scripts/src/src.sh
 
 echocolor() {
   color="$1"

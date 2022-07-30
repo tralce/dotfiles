@@ -2,7 +2,7 @@
 # vim:fdm=marker
 
 # variables, sources {{{
-source ~/Scripts/src/src.sh
+source ~/.bin/src.sh
 image=
 disk=
 fs="ntfs"

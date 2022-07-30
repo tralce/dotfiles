@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/Scripts/src/src.sh
+source ~/.bin/src.sh
 
 dirs=(
   Archive
@@ -22,8 +22,6 @@ dirs=(
   Videos
 )
 
-echocolor green "$HOME/Scripts..."
-chmod -R a-st,u+rwx,go-w+rx "$HOME"/Scripts
 for dir in ${dirs[@]}
 do
   if [ -d "$HOME/$dir" ]

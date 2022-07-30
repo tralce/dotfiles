@@ -10,7 +10,7 @@ tmp="$(mktemp)"
 inputfile="$tmp"
 outputfile="/etc/pacman.d/mirrorlist"
 
-source ~/Scripts/src/src.sh
+source ~/.bin/src.sh
 
 usage() {
   echo "sortmirrors.sh [-i inputfile] [-o outputfile]"

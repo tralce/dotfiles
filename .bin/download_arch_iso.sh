@@ -7,7 +7,7 @@ echo -e "\n\n Latest release: $releasename \n\n"
 pushd $HOME/ISOs/OSes/
 if wget -nv "http://mirrors.kernel.org/archlinux/iso/$releasename/archlinux-$releasename-x86_64.iso" -O archlinux-current-x86_64.iso
 then
-  $HOME/Scripts/trash.sh archlinux-????.??.??-x86_64.iso
+  $HOME/.bin/trash.sh archlinux-????.??.??-x86_64.iso
   mv -v archlinux-current-x86_64.iso archlinux-$releasename-x86_64.iso
 else
   echo "wget seems to have failed. stopping."

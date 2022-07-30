@@ -3,7 +3,7 @@
 
 # [ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
 
-source ~/Scripts/src/src.sh
+source ~/.bin/src.sh
 
 if [ -d "$HOME/Documents/Backups" ]
 then

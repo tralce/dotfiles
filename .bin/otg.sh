@@ -4,7 +4,7 @@
 # to support being run on other computers.
 
 trap "bye 1" INT # {{{
-source ~/Scripts/src/src.sh
+source ~/.bin/src.sh
 dest="$HOME"
 dirlist=
 fast="-fastcheck true"
@@ -55,17 +55,16 @@ done
 shift $(( OPTIND - 1 )) # }}}
 
 case "$1" in # {{{
-  camp)       [ -z $2 ] && bye 1 || dirlist=(Documents Downloads Scripts);src="ssh://${2}//home/tralce";;
-  backup)     dirlist=(.aws .gnupg Desktop Documents Downloads ESO ISOs Pictures/Wallpapers Scripts SourceSoftware);;
+  camp)       [ -z $2 ] && bye 1 || dirlist=(Documents Downloads);src="ssh://${2}//home/tralce";;
+  backup)     dirlist=(.aws .gnupg Desktop Documents Downloads ESO ISOs Pictures/Wallpapers SourceSoftware);;
   crypt)      dirlist=(crypt);src="ssh://nas.eclart.xyz//media";dest="/media";;
   downloads)  dirlist=(Downloads);;
   documents)  dirlist=(Documents);;
   eso)        dirlist=(ESO);;
   mb)         dirlist=(MiscBackups);;
   pictures)   dirlist=(Pictures);;
-  quick)      dirlist=(Documents Downloads Scripts);;
-  scripts)    dirlist=(Scripts);;
-  usb)        unset srclist;for drive in /media/USB128GB-0 /media/USB128GB-1;do [ -d $drive ] && srclist+=($drive);done;dirlist=(Documents ISOs Scripts SourceSoftware USB_Toolkits ventoy);perms="-fat";flip=1;;
+  quick)      dirlist=(Documents Downloads);;
+  usb)        unset srclist;for drive in /media/USB128GB-0 /media/USB128GB-1;do [ -d $drive ] && srclist+=($drive);done;dirlist=(Documents ISOs SourceSoftware USB_Toolkits ventoy);perms="-fat";flip=1;;
   *)          echo 'Valid options: [-I] [-F] '
     echo 'backup   | downloads | eso     | mb'
     echo 'pictures | quick     | scripts | usb'
