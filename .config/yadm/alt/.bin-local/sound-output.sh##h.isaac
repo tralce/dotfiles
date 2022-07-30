@@ -11,15 +11,11 @@ fail() {
 }
 
 switch_headset() {
-  # pacmd set-card-profile 3 output:analog-stereo+input:mono-fallback
-  #pacmd set-card-profile 2 output:iec958-stereo+input:analog-stereo
-#  pacmd set-default-sink alsa_output.usb-Logitech_G533_Gaming_Headset-00.analog-stereo
   pacmd set-default-sink alsa_output.usb-Logitech_G533_Gaming_Headset-00.iec958-stereo
   compl "Logitech Headset"
 }
 
 switch_soundbar() {
-  #pacmd set-card-profile 2 output:analog-stereo
   pacmd set-default-sink alsa_output.pci-0000_08_00.3.analog-stereo
   compl "Sound Bar"
 }

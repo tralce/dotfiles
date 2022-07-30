@@ -5,4 +5,4 @@ do
   trash-put ~/x86_64/${pkg}*
 done
 trash-put ~/x86_64/tralce.*
-/home/tralce/Scripts/OtherEssentialFiles/dropship/scripts/refresh-repo.sh
+/home/tralce/.bin-local/refresh-repo.sh

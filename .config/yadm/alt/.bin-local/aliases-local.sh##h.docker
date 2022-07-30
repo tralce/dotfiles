@@ -1,3 +1,4 @@
+# vim: syn=sh
 alias    dcdown="docker-compose -f ~/prod/docker-compose.yaml down"
 alias    dckill="docker-compose -f ~/prod/docker-compose.yaml kill"
 alias    dclogs="docker-compose -f ~/prod/docker-compose.yaml logs"

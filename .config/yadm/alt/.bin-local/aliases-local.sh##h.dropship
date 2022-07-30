@@ -1,1 +1,2 @@
+# vim: syn=sh
 alias checkaur="checkroot pacman -U --needed ~/x86_64/*.tar.{xz,zst}"
