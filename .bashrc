@@ -133,7 +133,7 @@ if [[ $- =~ i ]]
 then
   stty ixoff -ixon # disable C-s to pause
   stty ixany # any sequence can restart flow
-  [ -f $HOME/.bin/tmux_or_screen.sh ] && $HOME/.bin/tmux_or_screen.sh
+  [ -n "$SSH_CLIENT" ] && [ -f $HOME/.bin/tmux_or_screen.sh ] && $HOME/.bin/tmux_or_screen.sh
   echocolor cyan "$bashrcver on $(uname -srm) $(uptime -p 2> /dev/null || uptime)"
 fi
 # }}}

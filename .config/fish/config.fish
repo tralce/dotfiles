@@ -233,7 +233,7 @@ test -e $HOME/.bin-trust/aliases-trust.sh;and source $HOME/.bin-trust/aliases-tr
 # }}}
 
 # tmux and splash {{{
-status is-interactive;and test "$TERM != linux";and ~/.bin/tmux_or_screen.sh
+status is-interactive;and test "$TERM != linux";and test -n "$SSH_CLIENT";and ~/.bin/tmux_or_screen.sh
 
 set fish_greeting (set_color $tc_orang)$configver on (uname -srm) (uptime -p 2> /dev/null; or uptime)
 # }}}
