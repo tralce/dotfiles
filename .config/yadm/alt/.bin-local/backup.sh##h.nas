@@ -82,16 +82,9 @@ runBackup() {
       optFastCheckold=$optFastCheck
       optFastCheck="-fastcheck false"
     fi
-    [ "$job" = ".gnupg" ] && [ "$port" = "48000" ] && continue
-    [ "$job" = ".aws" ] && [ "$port" = "48000" ] && continue
     unison $optTerse $optSyncMode $optFastCheck $optIgnoreArchives $optPerms $optTestServer $optExtra ${filebase:-$HOME}/$job $dest/$job
     exitcode=$?
-    if [ "$job" = "Scripts" ]
-    then
-      chmod -R a-st,u+rwx,go-w+rx "$HOME"/Scripts
-    else
-      chmod -R a-xst+X,ug+rw,o-w+r "$HOME"/$job
-    fi
+    chmod -R a-xst+X,ug+rw,o-w+r "$HOME"/$job
     if [ "$job" = "MiscBackups" ]
     then
       optFastCheck=$optFastCheckold
@@ -183,7 +176,7 @@ do_gman() {
   ips=(172.21.2.2)
   ports=(22)
   user="tralce"
-  runBackup Documents Downloads ISOs Pictures Scripts SourceSoftware
+  runBackup Documents Downloads ISOs Pictures SourceSoftware
 }
 
 do_barney() {
@@ -191,7 +184,7 @@ do_barney() {
   ips=(172.21.2.20)
   ports=(22)
   user="tralce"
-  runBackup Documents Downloads Pictures/Wallpapers Scripts
+  runBackup Documents Downloads Pictures/Wallpapers
 }
 
 do_judith() {
@@ -199,7 +192,7 @@ do_judith() {
   ips=(172.21.2.16 172.21.2.17)
   ports=(22)
   user="dhadley"
-  runBackup Documents Downloads ISOs Pictures/Wallpapers Scripts
+  runBackup Documents Downloads ISOs Pictures/Wallpapers
 }
 
 do_alyx() {
@@ -208,7 +201,7 @@ do_alyx() {
   ports=(22 48000)
   user="tralce"
   dirWin="y:"
-  runBackup Documents Downloads ESO ISOs MiscBackups Pictures Scripts SourceSoftware
+  runBackup Documents Downloads ESO ISOs MiscBackups Pictures SourceSoftware
 }
 
 do_adrian() {
@@ -219,7 +212,7 @@ do_adrian() {
   user=tralce
   optExtra="-servercmd /usr/local/bin/unison"
   optPerms=""
-  runBackup Documents Downloads ISOs Music/Music Pictures Scripts SourceSoftware
+  runBackup Documents Downloads ISOs Music/Music Pictures SourceSoftware
 }
 
 do_dog() {
@@ -227,7 +220,7 @@ do_dog() {
   ips=(172.21.2.12)
   ports=(22 48000)
   user="tralce"
-  runBackup Documents Downloads ESO Pictures/Wallpapers Scripts
+  runBackup Documents Downloads ESO Pictures/Wallpapers
 }
 
 do_odessa() {
@@ -238,7 +231,7 @@ do_odessa() {
   filebase="$HOME/OtherPeoplesBackups/Nicole"
   runBackup Documents Downloads Music Pictures Videos
   friendlyName="odessa"
-  runBackup ESO Pictures/Wallpapers Scripts
+  runBackup ESO Pictures/Wallpapers
 }
 
 do_arne() {
@@ -246,7 +239,7 @@ do_arne() {
   ips=(172.21.2.31)
   ports=(22)
   user="tralce"
-  runBackup Documents Pictures/Wallpapers Scripts
+  runBackup Documents Pictures/Wallpapers
 }
 
 do_eli() {
@@ -254,7 +247,7 @@ do_eli() {
   ips=(172.21.2.3)
   ports=(22 48000)
   user="tralce"
-  runBackup Documents Downloads ESO ISOs Pictures Scripts SourceSoftware USB_Toolkits Videos ventoy
+  runBackup Documents Downloads ESO ISOs Pictures SourceSoftware USB_Toolkits Videos ventoy
 }
 
 do_isaac() {
@@ -265,7 +258,7 @@ do_isaac() {
   filebase="$HOME/OtherPeoplesBackups/Nicole"
   runBackup Documents Downloads Music Pictures Videos
   friendlyName="isaac"
-  runBackup ESO Pictures/Wallpapers Scripts
+  runBackup ESO Pictures/Wallpapers
 }
 # }}}
 

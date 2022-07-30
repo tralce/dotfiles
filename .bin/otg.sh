@@ -56,7 +56,7 @@ shift $(( OPTIND - 1 )) # }}}
 
 case "$1" in # {{{
   camp)       [ -z $2 ] && bye 1 || dirlist=(Documents Downloads);src="ssh://${2}//home/tralce";;
-  backup)     dirlist=(.aws .gnupg Desktop Documents Downloads ESO ISOs Pictures/Wallpapers SourceSoftware);;
+  backup)     dirlist=(Documents Downloads ESO ISOs Pictures/Wallpapers SourceSoftware);;
   crypt)      dirlist=(crypt);src="ssh://nas.eclart.xyz//media";dest="/media";;
   downloads)  dirlist=(Downloads);;
   documents)  dirlist=(Documents);;
