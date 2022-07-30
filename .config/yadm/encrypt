@@ -1,5 +1,6 @@
-.ssh/config-*
-.ssh/*.pem
-.bin-trust/*
 .aws
+.bin-trust/*
+.config/topgrade-all.toml
 .gnupg
+.ssh/*.pem
+.ssh/config-*
