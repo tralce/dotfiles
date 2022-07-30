@@ -54,13 +54,13 @@ do
 done
 shift $(( OPTIND - 1 ))
 
-curl http://sc.tralce.com/OtherEssentialFiles/global/etc/pacman.d/mirrorlist > $mirtmp
+curl "https://gitea.eclart.xyz/tralce/etc/raw/branch/master/etc/yadm/alt/etc/pacman.d/mirrorlist%23%23d.Arch" > $mirtmp
 if ! diff /etc/pacman.d/mirrorlist $mirtmp &>/dev/null
 then
   cp $mirtmp /etc/pacman.d/mirrorlist
 fi
 
-curl http://sc.tralce.com/OtherEssentialFiles/global/etc/pacman.conf > $conftmp
+curl "https://gitea.eclart.xyz/tralce/etc/raw/branch/master/etc/yadm/alt/etc/pacman.conf%23%23d.Arch" > $conftmp
 if ! diff /etc/pacman.conf $conftmp &>/dev/null
 then
   cp $conftmp /etc/pacman.conf
