@@ -26,5 +26,5 @@ att() {
 
 case $curterm in
   nemo) exit 0;;
-  *)    att;;
+  *)    [ -n "$SSH_CLIENT" ] && att;;
 esac
