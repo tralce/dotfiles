@@ -66,7 +66,7 @@ for newpath in \
   /bin \
   /usr/sbin \
   /sbin \
-  $HOME/.bin-local \
+  $HOME/.bin-trust \
   $HOME/.bin-local \
   $HOME/.bin \
   /var/lib/snapd/snap/bin \

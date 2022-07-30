@@ -4,3 +4,4 @@
 .gnupg
 .ssh/*.pem
 .ssh/config-*
+.vpn_configs/*
