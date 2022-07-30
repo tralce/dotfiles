@@ -2,7 +2,7 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["firmware", "pip3"]
+disable = ["firmware"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
