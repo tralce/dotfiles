@@ -92,9 +92,11 @@ dialog 	--backtitle "$backtitle" \
   "fzf" "FuZzy Find" off \
   "gdu" "Best disk usage analyzer" $minimal \
   "gum-bin" "charmbracelet's Gum" $minimal \
+  "gum-bin" "gum for shell scripts" $minimal \
   "htop" "Better than top" $minimal \
   "inotify-tools transmission-cli" "" $minimal \
   "libqalculate" "Command line calculator" $minimal \
+  "lsb-release" "what os am I" $minimal \
   "lsd" "better than ls" $minimal \
   "lshw" "" $physical \
   "man-db" "What were they thinking, not including this?" $minimal \
@@ -123,6 +125,7 @@ dialog 	--backtitle "$backtitle" \
   "udisks2" "Auto mounting" $physical \
   "usbutils" "Why isn't lsusb included?" $physical \
   "wget" "A pretty good downloader" $minimal \
+  "yadm" "yet another dotfile manager" $minimal \
   "zsh zsh-doc zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search" "ZShell - better than bash" $minimal \
   "" "" off \
   "axel" "Multi threaded wget" $minimal \
