@@ -19,6 +19,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
+local config_path = awful.util.getdir("config") .. "/"
 -- }}}
 
 -- {{{ Error handling
@@ -69,25 +70,9 @@ editor_cmd = terminal .. " -e " .. editor
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
 
+dofile(config_path .. "layout.lua")
+
 -- Table of layouts to cover with awful.layout.inc, order matters.
-awful.layout.layouts = {
-    awful.layout.suit.tile.left,
-    awful.layout.suit.corner.se,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.fair,
---  awful.layout.suit.magnifier,
-    awful.layout.suit.max,
---  awful.layout.suit.spiral,
---  awful.layout.suit.floating,
-    awful.layout.suit.tile,
---  awful.layout.suit.tile.bottom,
---  awful.layout.suit.tile.top,
---  awful.layout.suit.fair.horizontal,
---  awful.layout.suit.max.fullscreen,
---  awful.layout.suit.corner.nw,
---  awful.layout.suit.corner.ne,
---  awful.layout.suit.corner.sw,
-}
 -- }}}
 
 -- {{{ Menu
