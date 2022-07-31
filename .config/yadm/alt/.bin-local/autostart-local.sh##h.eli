@@ -17,7 +17,7 @@ run discord --start-minimized
 run flameshot
 run numlockx
 run openrgb -p tralce
-run pa-applet
+run pa-applet --disable-notifications
 run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
 run steam -silent
 run synergys --config ~/.config/Synergy/synergy.sgc
