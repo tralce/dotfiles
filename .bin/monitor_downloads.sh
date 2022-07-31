@@ -7,15 +7,15 @@ then
   exit 1
 fi
 
-while getopts "u:p:h:" arg
-do
-  case $arg in
-    u)  xmuser="$OPTARG";;
-    p)  xmpass="$OPTARG";;
-    h)  xmhost="$OPTARG";;
-  esac
-  shift $(( OPTIND - 1 ))
-done
+# while getopts "u:p:h:" arg
+# do
+#   case $arg in
+#     u)  xmuser="$OPTARG";;
+#     p)  xmpass="$OPTARG";;
+#     h)  xmhost="$OPTARG";;
+#   esac
+#   shift $(( OPTIND - 1 ))
+# done
 
 while true
 do
@@ -27,9 +27,9 @@ do
     echo "The file '$filename' appeared in directory '$dir' via '$action' - ext $extension"
     sleep 0.1
     case ${extension,,} in
-      jpg|jpeg|gif|png|webm|mp4|mov|webp) mv -v --backup=numbered "${dir%/}/$filename" $HOME/Pictures/Incoming/$(uuidgen).${extension,,};;
+      jpg|jpeg|gif|png|webm|mp4|mov|webp) sleep 1;mv -v --backup=numbered "${dir%/}/$filename" $HOME/Pictures/Incoming/$(uuidgen).${extension,,};;
       aae)                                trash-put "${dir%/}/$filename";;
-      torrent)                            transmission-remote "$xmhost" --auth "$xmuser:$xmpass" --trash-torrent --add "${dir%/}/$filename" && trash-put "${dir%/}/$filename";;
+      #torrent)                            transmission-remote "$xmhost" --auth "$xmuser:$xmpass" --trash-torrent --add "${dir%/}/$filename" && trash-put "${dir%/}/$filename";;
     esac
   done
   sleep 1

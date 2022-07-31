@@ -28,6 +28,7 @@ xinput disable "ELAN Touchscreen"
 
 (while true;do razer.py;sleep 15;done) &
 
+run ~/.bin/monitor_downloads.sh
 run cbatticon
 run flameshot
 run nm-applet
