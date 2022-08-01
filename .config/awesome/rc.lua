@@ -103,7 +103,6 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 awful.spawn.with_shell("~/.bin/autostart-global.sh")
-awful.spawn.with_shell("~/.bin-local/autostart-local.sh")
 
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()

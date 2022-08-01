@@ -35,3 +35,5 @@ run numlockx
 run pa-applet --disable-notifications
 
 sleep 1
+
+test -e ~/.bin-local/autostart-local.sh && ~/.bin-local/autostart-local.sh
