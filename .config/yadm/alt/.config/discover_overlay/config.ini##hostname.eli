@@ -29,3 +29,25 @@ horizontal = False
 guild_ids = 
 overflow = 2
 
+[notification]
+rightalign = 1
+topalign = 2
+monitor = None
+enabled = 1
+floating = 0
+floating_x = 0
+floating_y = 0
+floating_w = 400
+floating_h = 400
+bg_col = [0.0, 0.0, 0.0, 0.5]
+fg_col = [1.0, 1.0, 1.0, 1.0]
+text_time = 10
+show_icon = 1
+rev = 0
+limit_width = 400
+icon_left = 1
+icon_padding = 8
+icon_size = 32
+padding = 8
+border_radius = 8
+
