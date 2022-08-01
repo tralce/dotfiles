@@ -16,7 +16,6 @@ then
   sleep 1
 fi
 
-# (while true;do setxkbmap -option compose:menu;setxkbmap -option compose:ralt;sleep 15;done) &
 xset dpms force on
 xset -dpms
 xset s noblank
@@ -28,7 +27,6 @@ run conky -q
 
 run blueman-applet
 run cbatticon
-# run clipit
 run flameshot
 run nm-applet
 run numlockx
