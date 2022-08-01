@@ -37,7 +37,7 @@ Load / Uptime: $alignr$loadavg / $uptime
 Updates:${alignr}${execi 60 checkupdates|wc -l}, ${execi 60 /home/tralce/Scripts/checkreboot.sh}
 Trash / Cache: ${alignr}${execi 30 bash -c 'du -hs --total ~/.local/share/Trash/files $HOME/*/.Trash-* /media/*/.Trash-* ~/.Trash /Volumes/*/.Trash-*' 2>/dev/null|grep total|cut -f1} / ${execi 5 du -hs /var/cache/pacman/pkg|cut -f1}
 
-CPU (${alignr}${cpu cpu0}%
+CPU ${alignr}${cpu cpu0}%
 ${cpubar cpu0 4}
 RAM${alignr}$mem / $memmax ($memperc%)
 ${membar 4}

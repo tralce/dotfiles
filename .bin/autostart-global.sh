@@ -33,3 +33,5 @@ run flameshot
 run nm-applet
 run numlockx
 run pa-applet --disable-notifications
+
+sleep 1
