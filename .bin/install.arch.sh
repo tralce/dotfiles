@@ -241,7 +241,7 @@ dialog 	--backtitle "$backtitle" \
   "gparted" "The very best partition editor" $desktop \
   "kitty" "Best terminal evah!" $desktop \
   "numlockx" "NumLock ON" off \
-  "synergy-tralce" "Cross platform keyboard and mouse sharing" off \
+  "synergy-git" "Cross platform keyboard and mouse sharing" off \
   "" "" off \
   "gimp" "GNU Image Manipulation Program" off \
   "howl" "Howl text editor" off \

@@ -38,7 +38,6 @@ ignore = Name {.host}
 ignore = Name {.last}
 ignore = Name {.localized}
 ignore = Name {.tty}
-ignore = Name {.ventoyignore}
 ignore = Name {.viminfo}
 ignore = Name {.wdmc}
 ignore = Name {Icon}

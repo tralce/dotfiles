@@ -1,0 +1,3 @@
+# vim: ft=sh
+alias aws1="aws --profile iamadmin-general"
+alias aws2="aws --profile iamadmin-prod"
