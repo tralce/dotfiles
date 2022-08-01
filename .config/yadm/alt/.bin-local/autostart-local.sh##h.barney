@@ -1,11 +1,12 @@
 #!/bin/sh
 
-$HOME/.bin/autostart-global.sh &
-
 function run {
-  if ! pgrep -f $1 ;
+  if command -v $1 &> /dev/null
   then
-    $@&
+    if ! pgrep -f $1 ;
+    then
+      $@&
+    fi
   fi
 }
 
@@ -13,6 +14,3 @@ synclient HorizScrollDelta=-150
 synclient VertScrollDelta=-150
 
 run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
-run nm-applet
-run cbatticon
-run pasystray

@@ -1,11 +1,12 @@
 #!/bin/bash
 
-$HOME/.bin/autostart-global.sh &
-
 function run {
-  if ! pgrep -f $1 ;
+  if command -v $1 &> /dev/null
   then
-    $@&
+    if ! pgrep -f $1 ;
+    then
+      $@&
+    fi
   fi
 }
 
@@ -29,12 +30,6 @@ xinput disable "ELAN Touchscreen"
 (while true;do razer.py;sleep 15;done) &
 
 run ~/.bin/monitor_downloads.sh
-run cbatticon
-run flameshot
-run nm-applet
-run pa-applet
 run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
 run synergyc 172.21.2.3
-run blueman-applet
-
 run keep-presence  -c

@@ -1,15 +1,15 @@
 #!/bin/bash
 
-$HOME/.bin/autostart-global.sh &
-
 function run {
-  if ! pgrep -f $1 ;
+  if command -v $1 &> /dev/null
   then
-    $@&
+    if ! pgrep -f $1 ;
+    then
+      $@&
+    fi
   fi
 }
 
 run synergyc 172.21.2.3
 run picom -cCGb -i 1
-run nm-applet
 run firefox --kiosk http://overwatch.eclart.xyz/arne.html

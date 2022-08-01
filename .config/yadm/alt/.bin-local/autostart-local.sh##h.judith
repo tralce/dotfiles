@@ -1,11 +1,12 @@
 #!/bin/sh
 
-$HOME/.bin/autostart-global.sh &
-
 function run {
-  if ! pgrep -f $1 ;
+  if command -v $1 &> /dev/null
   then
-    $@&
+    if ! pgrep -f $1 ;
+    then
+      $@&
+    fi
   fi
 }
 
@@ -15,8 +16,3 @@ xgamma -bgamma 0.8
 
 run picom -cCGb -i 0.95 -m 0.95 --vsync --backend glx
 run synergyc 172.21.2.3
-run nm-applet
-run pa-applet
-run flameshot
-run cbatticon
-run numlockx

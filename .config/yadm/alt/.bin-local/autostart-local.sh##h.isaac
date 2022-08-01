@@ -1,24 +1,18 @@
 #!/bin/bash
 
-~/.screenlayout/screen.sh && sleep 1
-
-$HOME/.bin/autostart-global.sh &
-
 function run {
-  if ! pgrep -f $1 ;
+  if command -v $1 &> /dev/null
   then
-    $@&
+    if ! pgrep -f $1 ;
+    then
+      $@&
+    fi
   fi
 }
 
 run discord --start-minimized
-run flameshot
-run numlockx
-#run openrgb -p tralce
-run pa-applet
 run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
-un steam -silent
-#run synergys --config ~/Scripts/OtherEssentialFiles/eli/synergy.sgc
+run steam -silent
 run xbindkeys
 
 (while true;do razer.py;sleep 15;done) &

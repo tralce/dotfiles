@@ -1,15 +1,15 @@
 #!/bin/bash
 
-$HOME/.bin/autostart-global.sh &
-
 function run {
-  if ! pgrep -f $1 ;
+  if command -v $1 &> /dev/null
   then
-    $@&
+    if ! pgrep -f $1 ;
+    then
+      $@&
+    fi
   fi
 }
 
-run flameshot
 run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
 run synergyc 172.21.2.3
 
