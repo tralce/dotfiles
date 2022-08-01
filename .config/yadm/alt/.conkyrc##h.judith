@@ -32,7 +32,7 @@ conky.text = [[
 SYSTEM ${hr 1}
 Time:$alignr${time %a %b %e %Y %I:%M:%S %P}
 Load / Uptime: $alignr$loadavg / $uptime
-Updates:${alignr}${execi 60 checkupdates|wc -l}, ${execi 60 ~/Scripts/checkreboot.sh}
+Updates:${alignr}${execi 60 checkupdates|wc -l}, ${execi 60 ~/.bin/checkreboot.sh}
 Trash: ${alignr}${execi 30 bash -c 'du -hs --total ~/.local/share/Trash/files $HOME/*/.Trash-* /media/*/.Trash-* ~/.Trash /Volumes/*/.Trash-*' 2>/dev/null|grep total|cut -f1}
 
 CPU ${alignr}${cpu cpu0}%
@@ -59,6 +59,6 @@ FILESYSTEM ${hr 1}
 /: (T: ${fs_size /}) (U: ${fs_used /}) (F: ${fs_free /})
 ${fs_bar 4 /}
 
-${exec ~/Scripts/freespace.sh}
+${exec ~/.bin/freespace.sh}
 
 ]];
