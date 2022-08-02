@@ -1,0 +1,44 @@
+{
+    "devices": {
+        "alsa_card.pci-0000_26_00.1": {
+            "ports": {
+                "hdmi-output-0": {},
+                "hdmi-output-1": {},
+                "hdmi-output-2": {
+                    "name": "HP Monitor"
+                },
+                "hdmi-output-3": {
+                    "name": "JBL Soundbar"
+                },
+                "hdmi-output-4": {},
+                "hdmi-output-5": {}
+            }
+        },
+        "alsa_card.pci-0000_28_00.3": {
+            "ports": {
+                "analog-input-front-mic": {
+                    "visible": false
+                },
+                "analog-input-rear-mic": {
+                    "visible": false
+                },
+                "analog-input-linein": {
+                    "visible": false
+                },
+                "analog-output-lineout": {
+                    "visible": false
+                },
+                "analog-output-headphones": {
+                    "visible": false
+                }
+            }
+        },
+        "alsa_card.usb-Razer_Razer_Nari_Ultimate-00": {
+            "ports": {
+                "razer-nari-output-chat": {},
+                "razer-nari-output-game": {},
+                "razer-nari-input": {}
+            }
+        }
+    }
+}
