@@ -210,7 +210,7 @@ dialog 	--backtitle "$backtitle" \
   "gnome-themes-standard" "Ok themes" $desktop \
   "lxdm" "A great display manager" $desktop \
   "lxrandr" "An ok RandR wrapper" $desktop \
-  "libertinus-font noto-fonts ttf-bitstream-vera ttf-dejavu ttf-droid ttf-liberation ttf-ubuntu-font-family noto-fonts-emoji ttf-twemoji ttf-twemoji-color" "More fonts than you can stand" $desktop \
+  "libertinus-font noto-fonts ttf-bitstream-vera ttf-dejavu ttf-droid ttf-liberation ttf-ubuntu-font-family ttf-jetbrains-mono noto-fonts-emoji ttf-twemoji ttf-twemoji-color" "More fonts than you can stand" $desktop \
   "papirus-icon-theme" "Papirus Icon Theme" $desktop \
   "xorg-server xclip xorg-apps xorg-xev xorg-xmodmap xorg-xinit xorg-xkill xterm xpra" "Essential X" $desktop \
   "" "" off \
