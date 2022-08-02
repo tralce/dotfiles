@@ -31,6 +31,7 @@ run flameshot
 run nm-applet
 run numlockx
 run pa-applet --disable-notifications
+run indicator-sound-switcher
 
 sleep 1
 
