@@ -19,6 +19,5 @@ run steam -silent
 run synergys --config ~/.config/Synergy/synergy.sgc
 run xbindkeys
 run keep-presence -c
-run indicator-sound-switcher
 
 (while true;do razer.py;sleep 15;done) &
