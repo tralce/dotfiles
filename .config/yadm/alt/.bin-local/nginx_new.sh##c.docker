@@ -8,11 +8,11 @@ dir="$HOME/prod/nginx/conf.d"
 
 echo "Specify internal address:"
 internal="$(gum input --placeholder 'https://123.45.67.89:8080')"
-echo " → $internal"
+echo "-> $internal"
 
 echo "Specify external address:"
 external="$(gum input --placeholder 'service.example.com')"
-echo "→ $external"
+echo "-> $external"
 
 proxytype="$(gum choose 'Proxmox Server' 'External Service' 'Docker Container')"
 
@@ -44,6 +44,7 @@ server {
   ${resolver}
   location / {
     ${auth}
+    include /etc/nginx/proxy.conf;
     proxy_pass ${internal};
   }
 }
