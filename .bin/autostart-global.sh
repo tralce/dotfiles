@@ -21,6 +21,7 @@ xset -dpms
 xset s noblank
 xset s off
 xsetroot -cursor_name left_ptr
+xmodmap -e 'keycode 135='
 
 (sleep 1 && nitrogen --restore) &
 run conky -q
