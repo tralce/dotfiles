@@ -18,7 +18,7 @@ do
       chromium)		options="--disable-session-restore-bubble --disable-restore-session-state";;
       google-chrome-stable)	options="--disable-session-restore-bubble --profile-directory=Default --disable-gpu";;
     esac
-    $browser $options
+    GTK_USE_PORTAL=1 $browser $options
     break
   fi
 done
