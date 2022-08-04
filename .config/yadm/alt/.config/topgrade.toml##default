@@ -62,6 +62,7 @@
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 "sysyadm" = "sudo yadm --yadm-dir /etc/yadm --yadm-data /etc/yadm/data pull"
+"Remove old packages" = "~/.bin/checkorphans.sh"
 
 [brew]
 #greedy_cask = true
