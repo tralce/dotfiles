@@ -19,5 +19,7 @@ do
     jpg) convert $fn ${fn%.*}.jpg;;
     gif) convert $fn ${fn%.*}.gif;;
     mp4) ffmpeg -i $fn ${fn%.*}.mp4;;
+    *)   exit 1;;
   esac
+  [ $? -eq 0 ] && trash-put $fn
 done

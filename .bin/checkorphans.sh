@@ -1,10 +1,10 @@
 #!/bin/bash
 # checks for orphaned pacman packages and offers to remove them
 
-if command -q apt
+if command -v apt &> /dev/null
 then
   sudo apt autoremove
-elif command -q pacman
+elif command -v pacman &> /dev/null
 then
   tmp=$(mktemp)
   pacman -Qqdt >> "$tmp"
