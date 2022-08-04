@@ -89,26 +89,22 @@ dialog 	--backtitle "$backtitle" \
   "fd" "Modern alternative to find" $minimal \
   "fish" "fish shell" $minimal \
   "fping gping" "Some great ping tools" $minimal \
-  "fzf" "FuZzy Find" off \
   "gdu" "Best disk usage analyzer" $minimal \
   "gum-bin" "charmbracelet's Gum" $minimal \
-  "gum-bin" "gum for shell scripts" $minimal \
   "htop" "Better than top" $minimal \
-  "inotify-tools transmission-cli" "" $minimal \
+  "inotify-tools" "" $minimal \
+  "transmission-cli" "" $desktop \
   "libqalculate" "Command line calculator" $minimal \
   "lsb-release" "what os am I" $minimal \
   "lsd" "better than ls" $minimal \
   "lshw" "" $physical \
   "man-db" "What were they thinking, not including this?" $minimal \
-  "mlocate" "find / -name is for suckers" $minimal \
-  "moreutils" "Little command line utils" $minimal \
-  "ncdu" "Best disk usage analyzer" $minimal \
+  "plocate" "find / -name is for suckers" $minimal \
   "neovim" "Greatly improved vim" $minimal \
   "oath-toolkit" "OTP tools" $minimal \
   "openssh" "Secure shell daemon" $minimal \
-  "pacman-contrib reflector pacgraph pkgfile pacutils" "Extra tools for pacman" $minimal \
+  "pacman-contrib reflector pacgraph pkgfile" "Extra tools for pacman" $minimal \
   "perl-rename" "The rename we know and love" $minimal \
-  "postfix s-nail" "emailed notifications" off \
   "progress" "Show progress of running coreutils" $minimal \
   "pv" "Pipe viewer" $minimal \
   "pwgen" "Great password generator" $minimal \
