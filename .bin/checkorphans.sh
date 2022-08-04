@@ -13,12 +13,12 @@ then
   then
     echo "Found these orphans."
     cat "$tmp"
-    read -p "Remove them? " -n 1 -r
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]
-    then
-      sudo pacman -Rsn $(cat "$tmp"|xargs)
-    fi
+    #read -p "Remove them? " -n 1 -r
+    #echo
+    #if [[ $REPLY =~ ^[Yy]$ ]]
+    #then
+    gum confirm "Remove them?" && sudo pacman -Rsn $(cat "$tmp"|xargs)
+    #fi
   elif [ "$tmpsize" -eq 0 ]
   then
     echo "No orphans found."
