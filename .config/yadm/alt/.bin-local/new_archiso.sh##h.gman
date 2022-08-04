@@ -1,0 +1,5 @@
+#!/bin/bash
+newowner="$(whoami):$(id -gn)"
+sudo mkarchiso -v -w /tmp/archiso-tmp -o $HOME/ISOs/OSes /usr/share/archiso/configs/releng/
+sudo chown -c $newowner $HOME/ISOs/OSes/archlinux-$(date +%Y.%m.%d)-x86_64.iso
+gum confirm "Boot the iso for test?" && run_archiso -i $HOME/ISOs/OSes/archlinux-$(date +%Y.%m.%d)-x86_64.iso
