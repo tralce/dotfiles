@@ -4,7 +4,7 @@
 # uses awk etc to extract actually useful information from smartctl -a
 # depends on sudo, awk, column, smartmontools
 
-source ~/bin/src.sh
+source ~/.bin/src.sh
 
 if [ $# -eq 0 ]
 then
