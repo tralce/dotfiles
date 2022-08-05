@@ -2,6 +2,8 @@
 
 " vim-plug {{{
 silent! call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'dag/vim-fish'
 Plug 'dense-analysis/ale'
 Plug 'dhruvasagar/vim-table-mode'
@@ -115,6 +117,8 @@ let g:monokai_gui_italic = 1
 nnoremap <F5> :UndotreeToggle<CR>
 map <leader>ut :UndotreeToggle<CR>
 
+" fzf.vim
+nmap <leader>ws :Rg<cr>
 " }}}
 
 " backup, swap, and undo {{{
