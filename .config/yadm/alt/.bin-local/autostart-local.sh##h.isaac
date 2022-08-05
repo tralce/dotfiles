@@ -10,6 +10,8 @@ function run {
   fi
 }
 
+xmodmap -e 'keycode 135='
+
 run discord --start-minimized
 run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
 run steam -silent

@@ -10,6 +10,8 @@ function run {
   fi
 }
 
+xmodmap -e 'keycode 135='
+
 synclient HorizScrollDelta=-30
 synclient VertScrollDelta=-30
 
