@@ -6,10 +6,24 @@ set -l configver v2021-09-14
 # tralce's Monokai colors {{{
 # set -L
 #      variable hexhex fallback {{{
+# set -U tc_black #000000 black
+# set -U tc_blue1 #4377fe blue
+# set -U tc_blue2 #4eade5 blue
+# set -U tc_green #97e023 green
+# set -U tc_grey1 #2D2E27 grey
+# set -U tc_grey2 #575B61 grey
+# set -U tc_grey3 #8F908A grey
+# set -U tc_magen #f3005f magenta
+# set -U tc_orang #fa8419 yellow
+# set -U tc_oryel #fd971f yellow
+# set -U tc_purpl #9c64fe cyan
+# set -U tc_brred #FF1919 red
+# set -U tc_white #FFFFFF white
+# set -U tc_yello #ffff43 yellow
 set -U tc_black 000000 black
-set -U tc_blue1 4377fe blue
-set -U tc_blue2 4eade5 blue
-set -U tc_green 97e023 green
+set -U tc_blue1 0000ff blue
+# set -U tc_blue2 4eade5 blue
+set -U tc_green 00ff00 green
 set -U tc_grey1 2D2E27 grey
 set -U tc_grey2 575B61 grey
 set -U tc_grey3 8F908A grey
@@ -21,33 +35,33 @@ set -U tc_brred FF1919 red
 set -U tc_white FFFFFF white
 set -U tc_yello ffff43 yellow
 # }}}
-set -U fish_color_autosuggestion $tc_grey3
-set -U fish_color_cancel $tc_brred
-set -U fish_color_command $tc_magen
-set -U fish_color_comment $tc_grey2
-set -U fish_color_cwd $tc_blue2
-set -U fish_color_end $tc_blue1
-set -U fish_color_error $tc_brred
-set -U fish_color_escape $tc_brred
-set -U fish_color_host $tc_green
-set -U fish_color_host_remote $tc_oryel
-set -U fish_color_keyword $tc_purpl
-set -U fish_color_match $tc_brred --background brblack
-set -U fish_color_normal $tc_white
-set -U fish_color_operator $tc_blue1
-set -U fish_color_param $tc_yello
-set -U fish_color_quote $tc_orang
-set -U fish_color_redirection $tc_blue2
-set -U fish_color_search_match --background=$tc_grey3
-set -U fish_color_user $tc_green
-set -U fish_color_valid_path $tc_blue2 --underline
+set -U fish_color_autosuggestion grey
+set -U fish_color_cancel brred
+set -U fish_color_command brmagenta
+set -U fish_color_comment grey
+set -U fish_color_cwd brblue
+set -U fish_color_end brblue
+set -U fish_color_error brred
+set -U fish_color_escape brred
+set -U fish_color_host brgreen
+set -U fish_color_host_remote dark_yellow
+set -U fish_color_keyword brmagenta
+set -U fish_color_match brred --background brblack
+set -U fish_color_normal brwhite
+set -U fish_color_operator brblue
+set -U fish_color_param bryellow
+set -U fish_color_quote yellow
+set -U fish_color_redirection brblue
+set -U fish_color_search_match --background=grey
+set -U fish_color_user brgreen
+set -U fish_color_valid_path brblue --underline
 set -U fish_pager_color_completion normal
-set -U fish_pager_color_description $tc_oryel
+set -U fish_pager_color_description yellow
 set -U fish_pager_color_prefix white --bold --underline
-set -U fish_pager_color_progress $tc_purpl --background=$tc_grey1
+set -U fish_pager_color_progress brmagenta --background=grey
 
 # idk what these do
-set -U fish_color_history_current $tc_blue1
+set -U fish_color_history_current brblue
 set -U fish_color_selection white --bold --background=brblack
 # default fish colors {{{
 # set -L
@@ -89,7 +103,7 @@ function fish_prompt --description 'Write out the prompt'
   set -l prefix
   set -l suffix ' ξ'
   if contains -- $USER root toor
-    set color_user $tc_brred
+    set color_user brred
     set suffix ' #'
   end
   if set -q SSH_TTY
@@ -101,7 +115,7 @@ function fish_prompt --description 'Write out the prompt'
   else
     set rngstatus
   end
-  echo -e -n -s (set_color $tc_yello) $rngstatus (set_color $color_user) "$USER" (set_color $tc_blue2) @ (set_color $color_host) (prompt_hostname) $normal ' ' (set_color $fish_color_cwd) (prompt_pwd) $normal (fish_vcs_prompt) $normal $prompt_status (set_color $color_user) $suffix $normal" "
+  echo -e -n -s (set_color bryellow) $rngstatus (set_color $color_user) "$USER" (set_color brblue) @ (set_color $color_host) (prompt_hostname) $normal ' ' (set_color $fish_color_cwd) (prompt_pwd) $normal (fish_vcs_prompt) $normal $prompt_status (set_color $color_user) $suffix $normal" "
 end
 # }}}
 
@@ -235,5 +249,5 @@ test -e $HOME/.bin-trust/aliases-trust.sh;and source $HOME/.bin-trust/aliases-tr
 # tmux and splash {{{
 status is-interactive;and test "$TERM != linux";and test -n "$SSH_CLIENT";and ~/.bin/tmux_or_screen.sh
 
-set fish_greeting (set_color $tc_orang)$configver on (uname -srm) (uptime -p 2> /dev/null; or uptime)
+set fish_greeting (set_color yellow)$configver on (uname -srm) (uptime -p 2> /dev/null; or uptime)
 # }}}
