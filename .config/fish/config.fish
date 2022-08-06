@@ -4,10 +4,10 @@
 set -l configver v2021-09-14
 
 # colors {{{
-set -U fish_color_autosuggestion grey
+set -U fish_color_autosuggestion brgrey
 set -U fish_color_cancel brred
 set -U fish_color_command brgreen
-set -U fish_color_comment grey
+set -U fish_color_comment brgrey
 set -U fish_color_cwd brblue
 set -U fish_color_end brmagenta
 set -U fish_color_error brred
