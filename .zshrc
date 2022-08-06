@@ -168,7 +168,6 @@ PROMPT="${rngstatus}%F{$strcolor}%n%F{cyan}@%F{green}%m%F{blue} %~ ${ret_status}
 if [[ $- =~ i ]]
 then
   [ -n "$SSH_CLIENT" ] && [ -f $HOME/.bin/tmux_or_screen.sh ] && $HOME/.bin/tmux_or_screen.sh
-  echocolor cyan "$zshrcver on $(uname -srm) $(uptime -p 2> /dev/null || uptime)"
+  gum style --foreground="#ff0055" "$zshrcver on $(uname -srm 2> /dev/null) $(uptime -p 2> /dev/null || uptime) (zsh)"
 fi
 # }}}
-

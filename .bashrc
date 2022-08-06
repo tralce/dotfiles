@@ -122,9 +122,9 @@ then
 fi
 if [ $UID = 0 ]
 then
-  export PS1="$rnglv\[\e[31m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\] \[\e[31m\]\\$\[\e[m\] "
+  export PS1="$rnglv\[\e[91m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[92m\]\h\[\e[m\] \[\e[36m\]\w\[\e[m\] \[\e[91m\]\\$\[\e[m\] "
 else
-  export PS1="$rnglv\[\e[32m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\] \[\e[32m\]\\$\[\e[m\] "
+  export PS1="$rnglv\[\e[92m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[92m\]\h\[\e[m\] \[\e[36m\]\w\[\e[m\] \[\e[92m\]\\$\[\e[m\] "
 fi
 # }}}
 
@@ -134,6 +134,6 @@ then
   stty ixoff -ixon # disable C-s to pause
   stty ixany # any sequence can restart flow
   [ -n "$SSH_CLIENT" ] && [ -f $HOME/.bin/tmux_or_screen.sh ] && $HOME/.bin/tmux_or_screen.sh
-  echocolor cyan "$bashrcver on $(uname -srm) $(uptime -p 2> /dev/null || uptime)"
+  gum style --foreground="#ff0055" "$bashrcver on $(uname -srm 2> /dev/null) $(uptime -p 2> /dev/null || uptime) (bash)"
 fi
 # }}}
