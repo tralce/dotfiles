@@ -3,44 +3,13 @@
 
 set -l configver v2021-09-14
 
-# tralce's Monokai colors {{{
-# set -L
-#      variable hexhex fallback {{{
-# set -U tc_black #000000 black
-# set -U tc_blue1 #4377fe blue
-# set -U tc_blue2 #4eade5 blue
-# set -U tc_green #97e023 green
-# set -U tc_grey1 #2D2E27 grey
-# set -U tc_grey2 #575B61 grey
-# set -U tc_grey3 #8F908A grey
-# set -U tc_magen #f3005f magenta
-# set -U tc_orang #fa8419 yellow
-# set -U tc_oryel #fd971f yellow
-# set -U tc_purpl #9c64fe cyan
-# set -U tc_brred #FF1919 red
-# set -U tc_white #FFFFFF white
-# set -U tc_yello #ffff43 yellow
-set -U tc_black 000000 black
-set -U tc_blue1 0000ff blue
-# set -U tc_blue2 4eade5 blue
-set -U tc_green 00ff00 green
-set -U tc_grey1 2D2E27 grey
-set -U tc_grey2 575B61 grey
-set -U tc_grey3 8F908A grey
-set -U tc_magen f3005f magenta
-set -U tc_orang fa8419 yellow
-set -U tc_oryel fd971f yellow
-set -U tc_purpl 9c64fe cyan
-set -U tc_brred FF1919 red
-set -U tc_white FFFFFF white
-set -U tc_yello ffff43 yellow
-# }}}
+# colors {{{
 set -U fish_color_autosuggestion grey
 set -U fish_color_cancel brred
-set -U fish_color_command brmagenta
+set -U fish_color_command brgreen
 set -U fish_color_comment grey
 set -U fish_color_cwd brblue
-set -U fish_color_end brblue
+set -U fish_color_end brmagenta
 set -U fish_color_error brred
 set -U fish_color_escape brred
 set -U fish_color_host brgreen
@@ -48,10 +17,10 @@ set -U fish_color_host_remote dark_yellow
 set -U fish_color_keyword brmagenta
 set -U fish_color_match brred --background brblack
 set -U fish_color_normal brwhite
-set -U fish_color_operator brblue
-set -U fish_color_param bryellow
+set -U fish_color_operator brmagenta
+set -U fish_color_param cyan
 set -U fish_color_quote yellow
-set -U fish_color_redirection brblue
+set -U fish_color_redirection brmagenta
 set -U fish_color_search_match --background=grey
 set -U fish_color_user brgreen
 set -U fish_color_valid_path brblue --underline
@@ -63,34 +32,6 @@ set -U fish_pager_color_progress brmagenta --background=grey
 # idk what these do
 set -U fish_color_history_current brblue
 set -U fish_color_selection white --bold --background=brblack
-# default fish colors {{{
-# set -L
-# set -U fish_color_normal normal
-# set -U fish_color_command 005fd7
-# set -U fish_color_quote 999900
-# set -U fish_color_redirection 00afff
-# set -U fish_color_end 009900
-# set -U fish_color_error ff0000
-# set -U fish_color_param 00afff
-# set -U fish_color_comment 990000
-# set -U fish_color_match --background=brblue
-# set -U fish_color_selection white --bold --background=brblack
-# set -U fish_color_search_match bryellow --background=brblack
-# set -U fish_color_history_current --bold
-# set -U fish_color_operator 00a6b2
-# set -U fish_color_escape 00a6b2
-# set -U fish_color_cwd green
-# set -U fish_color_cwd_root red
-# set -U fish_color_valid_path --underline
-# set -U fish_color_autosuggestion 555 brblack
-# set -U fish_color_user brgreen
-# set -U fish_color_host normal
-# set -U fish_color_cancel -r
-# set -U fish_pager_color_completion normal
-# set -U fish_pager_color_description B3A06D yellow
-# set -U fish_pager_color_prefix white --bold --underline
-# set -U fish_pager_color_progress brwhite --background=cyan
-# }}}
 # }}}
 
 # fish_prompt {{{
