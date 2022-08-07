@@ -134,6 +134,6 @@ then
   stty ixoff -ixon # disable C-s to pause
   stty ixany # any sequence can restart flow
   [ -n "$SSH_CLIENT" ] && [ -f $HOME/.bin/tmux_or_screen.sh ] && $HOME/.bin/tmux_or_screen.sh
-  gum style --foreground="#ff0055" "$bashrcver on $(uname -srm 2> /dev/null) $(uptime -p 2> /dev/null || uptime) (bash)"
+  echo "$(tput setaf 197)$bashrcver on $(uname -srm 2> /dev/null) $(uptime -p 2> /dev/null || uptime) (bash)"
 fi
 # }}}
