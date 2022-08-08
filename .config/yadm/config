@@ -1,2 +1,4 @@
 [yadm]
 	alt-copy = false
+[credential]
+	helper = store
