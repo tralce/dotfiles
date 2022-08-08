@@ -201,7 +201,7 @@ do_alyx() {
   ports=(22 48000)
   user="tralce"
   dirWin="y:"
-  runBackup Documents Downloads ESO ISOs MiscBackups Pictures SourceSoftware
+  runBackup .eso Documents Downloads ESO ISOs MiscBackups Pictures SourceSoftware
 }
 
 do_adrian() {
