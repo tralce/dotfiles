@@ -231,7 +231,7 @@ do_odessa() {
   filebase="$HOME/OtherPeoplesBackups/Nicole"
   runBackup Documents Downloads Music Pictures Videos
   friendlyName="odessa"
-  runBackup ESO Pictures/Wallpapers
+  runBackup .eso ESO Pictures/Wallpapers
 }
 
 do_arne() {
@@ -247,7 +247,7 @@ do_eli() {
   ips=(172.21.2.3)
   ports=(22 48000)
   user="tralce"
-  runBackup Documents Downloads ESO ISOs Pictures SourceSoftware USB_Toolkits Videos ventoy
+  runBackup .eso Documents Downloads ESO ISOs Pictures SourceSoftware USB_Toolkits Videos ventoy
 }
 
 do_isaac() {
@@ -258,7 +258,7 @@ do_isaac() {
   filebase="$HOME/OtherPeoplesBackups/Nicole"
   runBackup Documents Downloads Music Pictures Videos
   friendlyName="isaac"
-  runBackup ESO Pictures/Wallpapers
+  runBackup .eso ESO Pictures/Wallpapers
 }
 # }}}
 
