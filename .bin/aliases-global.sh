@@ -1,4 +1,3 @@
-
 alias backup="echo 'this is not nas - ssh in and run backup'"
 alias chgrp="chgrp -c"
 alias chmod="chmod -c"
