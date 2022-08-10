@@ -2,27 +2,27 @@
 
 " vim-plug {{{
 silent! call plug#begin('~/.vim/plugged')
+Plug 'dag/vim-fish'
+" Plug 'dhruvasagar/vim-table-mode'
+" Plug 'dkarter/bullets.vim'
+" Plug 'lervag/wiki-ft.vim'
+" Plug 'lervag/wiki.vim'
+" Plug 'masukomi/vim-markdown-folding'
+Plug 'dense-analysis/ale'
+" Plug 'godlygeek/tabular'
+Plug 'jamessan/vim-gnupg'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'dag/vim-fish'
-Plug 'dense-analysis/ale'
-Plug 'dhruvasagar/vim-table-mode'
-Plug 'dkarter/bullets.vim'
-Plug 'godlygeek/tabular'
-Plug 'jamessan/vim-gnupg'
-Plug 'lervag/wiki-ft.vim'
-Plug 'lervag/wiki.vim'
-Plug 'masukomi/vim-markdown-folding'
 Plug 'mbbill/undotree'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'raimondi/delimitmate'
 Plug 'ralismark/opsort.vim'
-Plug 'tpope/vim-eunuch'
+" Plug 'tpope/vim-eunuch'
 Plug 'tralce/vim-airline-themes'
 Plug 'tralce/vim-monokai'
 Plug 'vim-airline/vim-airline'
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 call plug#end()
 " }}}
 
@@ -74,19 +74,45 @@ endif
 
 " plugin settings {{{
 if has("nvim")
-" indent guides {{{
+  " indent guides {{{
   let g:indent_guides_enable_on_vim_startup = 1
   let g:indent_guides_start_level = 1
   let g:indent_guides_guide_size = 1
-" }}}
+  " }}}
   set fillchars=fold:\ ,eob:~
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   lua require'colorizer'.setup()
 endif
 
+" vimwiki {{{
+" let g:vimwiki_list = [{'path': '~/Documents/vw/'}]
+let g:vimwiki_list = [{'path': '~/Documents/vw/', 'syntax': 'markdown', 'ext': '.wiki'}]
+let g:vimwiki_global_ext = 0
+let g:vimwiki_folding = 'expr'
+
+autocmd FileType vimwiki set foldlevel=1
+autocmd FileType vimwiki set foldenable
+autocmd FileType vimwiki set foldmethod=expr
+autocmd FileType vimwiki set foldexpr=VimwikiFoldLevelCustom(v:lnum)
+autocmd FileType vimwiki IndentGuidesDisable
+
+function! VimwikiFoldLevelCustom(lnum) " {{{
+  let pounds = strlen(matchstr(getline(a:lnum), '^#\+'))
+  if (pounds)
+    return '>' . pounds  " start a fold level
+  endif
+  if getline(a:lnum) =~? '\v^\s*$'
+    if (strlen(matchstr(getline(a:lnum + 1), '^#\+')))
+      return '-1' " don't fold last blank line before header
+    endif
+  endif
+  return '=' " return previous fold level
+endfunction " }}}
+" }}}
+
 " table-mode
-let g:table_mode_color_cells = 1
-nmap gqq :TableModeRealign<CR>
+" let g:table_mode_color_cells = 1
+" nmap gqq :TableModeRealign<CR>
 
 " airline
 let g:airline_theme='distinguished'
@@ -94,20 +120,8 @@ let g:airline_theme='distinguished'
 " fish
 autocmd FileType fish compiler fish
 
-" startify
-let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'f': '~/.config/fish/config.fish'}, {'a': '~/.config/awesome/rc.lua'} ]
-
 " gpg
 let g:GPGFilePattern = '*.\(gpg\|asc\|pgp\)\(.wiki\)\='
-
-" bullets
-let g:bullets_enabled_file_types = ['markdown', 'wiki']
-nmap <C-Space> :ToggleCheckbox<CR>
-
-" wiki.vim
-let g:wiki_root = '~/Documents/vw'
-autocmd FileType wiki set foldlevel=1
-autocmd FileType wiki IndentGuidesDisable
 
 " monokai
 let g:monokai_term_italic = 1
@@ -118,7 +132,7 @@ nnoremap <F5> :UndotreeToggle<CR>
 map <leader>ut :UndotreeToggle<CR>
 
 " fzf.vim
-nmap <leader>ws :Rg<cr>
+nmap <leader>rg :Rg<cr>
 " }}}
 
 " backup, swap, and undo {{{
