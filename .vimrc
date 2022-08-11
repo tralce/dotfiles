@@ -87,7 +87,7 @@ endif
 " vimwiki {{{
 " let g:vimwiki_list = [{'path': '~/Documents/vw/'}]
 " ✗
-let g:vimwiki_list = [{'path': '~/Documents/vw/', 'syntax': 'markdown', 'ext': '.wiki', 'listsyms': ' ○◐●✓'}]
+let g:vimwiki_list = [{'path': '~/Documents/vw/', 'syntax': 'markdown', 'ext': '.md', 'listsyms': ' ○◐●✓'}]
 let g:vimwiki_global_ext = 0
 let g:vimwiki_folding = 'expr'
 
