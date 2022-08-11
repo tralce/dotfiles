@@ -167,7 +167,7 @@ command! Q q
 command! Wq wq
 command! WQ wq
 command! Cls  :let @/ = ""
-command! Comp g/\[X\]\|\[-\]\| ✓ /m$|:Cls
+command! Comp g/\[X\]\|\[-\]\| ✓ \|[✓]/m$|:Cls
 command! Uncomp %s/\[.\]\|\[o\]\|\[O\]\|\[X\]\|\[-\]/\[ \]/g|:Cls
 command! Std  s/ /-/g|:Cls
 command! Relo :so ~/.vimrc
