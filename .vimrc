@@ -1,5 +1,5 @@
 " vim:foldmethod=marker
-
+"test
 " vim-plug {{{
 silent! call plug#begin('~/.vim/plugged')
 Plug 'dag/vim-fish'

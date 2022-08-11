@@ -2,3 +2,5 @@
 	alt-copy = false
 [credential]
 	helper = store
+[merge]
+	tool = nvimdiff2
