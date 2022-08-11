@@ -8,9 +8,9 @@ find . -type f -not -name "*.wiki" -exec mv -v '{}' '{}.wiki' \;
 
 for script in $(find . -name "*.wiki"|grep -v index.wiki|sed -e "s/\.\///g")
 do
-  if ! grep -q "${script}" index.wiki
+  if ! grep -q "${script%.*}" index.wiki
   then
-    echo "[[${script}]]"|tee -a index.wiki
+    echo "[[${script%.*}]]"|tee -a index.wiki
   fi
 done
 
@@ -23,8 +23,8 @@ find . -type f -not -name "*.wiki" -exec mv -v '{}' '{}.wiki' \;
 
 for config in $(find . -name "*.wiki"|grep -v index.wiki|sed -e "s/\.\///g")
 do
-  if ! grep -q "${config}" index.wiki
+  if ! grep -q "${config%.*}" index.wiki
   then
-    echo "[[${config}]]"|tee -a index.wiki
+    echo "[[${config%.*}]]"|tee -a index.wiki
   fi
 done
