@@ -3,11 +3,11 @@
 " vim-plug {{{
 silent! call plug#begin('~/.vim/plugged')
 Plug 'dag/vim-fish'
-" Plug 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode'
 " Plug 'dkarter/bullets.vim'
 " Plug 'lervag/wiki-ft.vim'
 " Plug 'lervag/wiki.vim'
-" Plug 'masukomi/vim-markdown-folding'
+Plug 'masukomi/vim-markdown-folding'
 Plug 'dense-analysis/ale'
 " Plug 'godlygeek/tabular'
 Plug 'jamessan/vim-gnupg'
@@ -25,13 +25,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 call plug#end()
 " }}}
-set autochdir
+
 " sets and settings {{{
 " indent {{{
 set autoindent
 set expandtab
 set shiftwidth=2
-"set smartindent
 set tabstop=2
 " }}}
 " mouse {{{
@@ -52,6 +51,7 @@ noremap! <LeftDrag> <LeftMouse>
 filetype plugin indent on
 highlight CursorLineNR ctermbg=red
 highlight clear CursorLine
+set autochdir
 set backspace=indent,eol,start
 set clipboard+=unnamedplus
 set cursorline
@@ -85,17 +85,23 @@ if has("nvim")
 endif
 
 " vimwiki {{{
-" let g:vimwiki_list = [{'path': '~/Documents/vw/'}]
-" ✗
 let g:vimwiki_list = [{'path': '~/Documents/vw/', 'syntax': 'markdown', 'ext': '.md', 'listsyms': ' ○◐●✓'}]
 let g:vimwiki_global_ext = 0
 let g:vimwiki_folding = 'expr'
+let vimwiki_hl_cb_checked = 2
 
 autocmd FileType vimwiki set foldlevel=1
 autocmd FileType vimwiki set foldenable
 autocmd FileType vimwiki set foldmethod=expr
 autocmd FileType vimwiki set foldexpr=VimwikiFoldLevelCustom(v:lnum)
 autocmd FileType vimwiki IndentGuidesDisable
+
+hi VimwikiHeader1 gui=bold guifg=#FA8419
+hi VimwikiHeader2 gui=bold guifg=#4377FE
+hi VimwikiHeader3 gui=bold guifg=#FFFF43
+hi VimwikiHeader4 gui=bold guifg=#9C64FE
+hi VimwikiHeader5 gui=bold guifg=#97E023
+hi VimwikiHeader6 gui=bold guifg=#FF1919
 
 function! VimwikiFoldLevelCustom(lnum) " {{{
   let pounds = strlen(matchstr(getline(a:lnum), '^#\+'))
@@ -110,10 +116,6 @@ function! VimwikiFoldLevelCustom(lnum) " {{{
   return '=' " return previous fold level
 endfunction " }}}
 " }}}
-
-" table-mode
-" let g:table_mode_color_cells = 1
-" nmap gqq :TableModeRealign<CR>
 
 " airline
 let g:airline_theme='distinguished'
