@@ -25,7 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 call plug#end()
 " }}}
-
+set autochdir
 " sets and settings {{{
 " indent {{{
 set autoindent
