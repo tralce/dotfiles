@@ -85,7 +85,8 @@ if has("nvim")
 endif
 
 " vimwiki {{{
-let g:vimwiki_list = [{'path': '~/Documents/vw/', 'syntax': 'markdown', 'ext': '.md', 'listsyms': ' ○◐●✓'}]
+" let g:vimwiki_list = [{'path': '~/Documents/vw/', 'syntax': 'markdown', 'ext': '.md', 'listsyms': ' ○◐●✓'}]
+let g:vimwiki_list = [{'path': '~/Documents/vw/', 'listsyms': ' ○◐●✓'}]
 let g:vimwiki_global_ext = 0
 let g:vimwiki_folding = 'expr'
 let vimwiki_hl_cb_checked = 2
@@ -104,6 +105,7 @@ hi VimwikiHeader5 gui=bold guifg=#97E023
 hi VimwikiHeader6 gui=bold guifg=#FF1919
 
 hi VimwikiLink gui=underline guifg=#4377FE
+hi textSnipTEX gui=bold guifg=#FF0055
 
 function! VimwikiFoldLevelCustom(lnum) " {{{
   let pounds = strlen(matchstr(getline(a:lnum), '^#\+'))
