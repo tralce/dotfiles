@@ -103,6 +103,8 @@ hi VimwikiHeader4 gui=bold guifg=#9C64FE
 hi VimwikiHeader5 gui=bold guifg=#97E023
 hi VimwikiHeader6 gui=bold guifg=#FF1919
 
+hi VimwikiLink gui=underline guifg=#4377FE
+
 function! VimwikiFoldLevelCustom(lnum) " {{{
   let pounds = strlen(matchstr(getline(a:lnum), '^#\+'))
   if (pounds)
@@ -190,5 +192,11 @@ nnoremap N Nzz
 nnoremap Q q
 nnoremap n nzz
 " }}}
+
+" https://stackoverflow.com/questions/9464844/how-to-get-group-name-of-highlighting-under-cursor-in-vim
+function! SynGroup()
+    let l:s = synID(line('.'), col('.'), 1)
+    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun
 
 colorscheme monokai
