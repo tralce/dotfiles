@@ -18,7 +18,7 @@ run discord --start-minimized
 run openrgb -p tralce
 run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
 run steam -silent
-run synergys --config ~/.config/Synergy/synergy.sgc
+run synergys
 run xbindkeys
 
 (while true;do razer.py;sleep 15;done) &
