@@ -1,4 +1,7 @@
 #!/bin/bash
+
+command -v keep-presence &> /dev/null && keep-presence -c &
+
 esodir="$HOME/ESO"
 gamedir="$HOME/.games/the-elder-scrolls-online/drive_c/users/$(whoami)/Documents/Elder Scrolls Online/live"
 
