@@ -2,23 +2,23 @@
 
 " vim-plug {{{
 silent! call plug#begin('~/.vim/plugged')
-Plug 'dag/vim-fish'
-Plug 'dhruvasagar/vim-table-mode'
 " Plug 'dkarter/bullets.vim'
+" Plug 'godlygeek/tabular'
 " Plug 'lervag/wiki-ft.vim'
 " Plug 'lervag/wiki.vim'
-Plug 'masukomi/vim-markdown-folding'
+" Plug 'tpope/vim-eunuch'
+Plug 'dag/vim-fish'
 Plug 'dense-analysis/ale'
-" Plug 'godlygeek/tabular'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'jamessan/vim-gnupg'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'masukomi/vim-markdown-folding'
 Plug 'mbbill/undotree'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ralismark/opsort.vim'
-" Plug 'tpope/vim-eunuch'
 Plug 'tralce/vim-airline-themes'
 Plug 'tralce/vim-monokai'
 Plug 'vim-airline/vim-airline'
@@ -27,12 +27,14 @@ call plug#end()
 " }}}
 
 " sets and settings {{{
+
 " indent {{{
 set autoindent
 set expandtab
 set shiftwidth=2
 set tabstop=2
 " }}}
+
 " mouse {{{
 set mouse=a
 function! MouseToggle()
@@ -48,6 +50,7 @@ nnoremap <F6> :call MouseToggle()<CR>
 noremap <LeftDrag> <LeftMouse>
 noremap! <LeftDrag> <LeftMouse>
 " }}}
+
 filetype plugin indent on
 highlight CursorLineNR ctermbg=red
 highlight clear CursorLine
@@ -70,6 +73,13 @@ if has("gui_running")
   set guioptions -=m
   set guioptions -=T
 endif
+
+" https://stackoverflow.com/questions/9464844/how-to-get-group-name-of-highlighting-under-cursor-in-vim
+function! SynGroup()
+  let l:s = synID(line('.'), col('.'), 1)
+  echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun
+
 " }}}
 
 " plugin settings {{{
@@ -194,11 +204,5 @@ nnoremap N Nzz
 nnoremap Q q
 nnoremap n nzz
 " }}}
-
-" https://stackoverflow.com/questions/9464844/how-to-get-group-name-of-highlighting-under-cursor-in-vim
-function! SynGroup()
-    let l:s = synID(line('.'), col('.'), 1)
-    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
-endfun
 
 colorscheme monokai
