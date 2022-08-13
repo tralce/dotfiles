@@ -5,7 +5,7 @@ curterm="$(ps -o comm= -p "$(($(ps -o ppid= -p "$(($(ps -o sid= -p "$$")))")))")
 att() {
   if which zellij &> /dev/null
   then
-    if [ -z "$ZELLIJ" -a -z "$SUDO_UID" -a -z "$SSH_CLIENT" ]
+    if [ -z "$ZELLIJ" -a -z "$SUDO_UID" ]
     then
       # zellij attach $(hostname -s) &> /dev/null || zellij -s $(hostname -s)
       # zellij
