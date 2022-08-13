@@ -8,13 +8,13 @@ section: aliases
 end
 
 section: links
-  judith:
-    right = barney
-  alyx:
-    left = barney
   barney:
-    right = alyx
+    left = alyx
+  alyx:
+    right = barney
     left = judith
+  judith:
+    right = alyx
 end
 
 section: options
