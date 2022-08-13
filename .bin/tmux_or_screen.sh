@@ -3,16 +3,16 @@
 curterm="$(ps -o comm= -p "$(($(ps -o ppid= -p "$(($(ps -o sid= -p "$$")))")))")"
 
 att() {
-  # if which zellij &> /dev/null
-  # then
-  #   if [ -z "$ZELLIJ" -a -z "$SUDO_UID" -a -z "$SSH_CLIENT" ]
-  #   then
-  #     # zellij attach $(hostname -s) &> /dev/null || zellij -s $(hostname -s)
-  #     # zellij
-  #     zellij attach --create "$(hostname -s)"
-  #   fi
-  # elif which tmux &> /dev/null
-  if which tmux &> /dev/null
+  if which zellij &> /dev/null
+  then
+    if [ -z "$ZELLIJ" -a -z "$SUDO_UID" -a -z "$SSH_CLIENT" ]
+    then
+      # zellij attach $(hostname -s) &> /dev/null || zellij -s $(hostname -s)
+      # zellij
+      zellij attach --create "$(hostname -s)"
+    fi
+  elif which tmux &> /dev/null
+  #if which tmux &> /dev/null
   then
     if [ -z "$TMUX" -a -z "$SUDO_UID" ]
     then
