@@ -2,6 +2,7 @@
 
 " vim-plug {{{
 silent! call plug#begin('~/.vim/plugged')
+Plug 'gko/vim-coloresque'
 Plug 'dag/vim-fish'
 Plug 'dense-analysis/ale'
 Plug 'dhruvasagar/vim-table-mode'
