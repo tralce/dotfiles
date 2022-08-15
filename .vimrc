@@ -59,7 +59,7 @@ set backspace=indent,eol,start
 set browsedir=buffer
 set clipboard+=unnamedplus
 set cursorline
-set fillchars=fold:\ ,eob:~
+set fillchars=fold:\  " no dots for folds
 set modeline
 set noshowmode
 set nowrap
