@@ -56,10 +56,10 @@ highlight CursorLineNR ctermbg=red
 highlight clear CursorLine
 set autochdir
 set backspace=indent,eol,start
+set browsedir=buffer
 set clipboard+=unnamedplus
 set cursorline
-set termguicolors
-set browsedir=buffer
+set fillchars=fold:\ ,eob:~
 set modeline
 set noshowmode
 set nowrap
@@ -67,6 +67,7 @@ set omnifunc=syntaxcomplete#Complete
 set scrolloff=999
 set showcmd
 set showmatch
+set termguicolors
 syntax enable
 
 if has("gui_running")
@@ -84,12 +85,6 @@ endfun
 
 " plugin settings {{{
 if has("nvim")
-  " indent guides {{{
-  let g:indent_guides_enable_on_vim_startup = 1
-  let g:indent_guides_start_level = 1
-  let g:indent_guides_guide_size = 1
-  " }}}
-  set fillchars=fold:\ ,eob:~
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   lua require'colorizer'.setup()
 endif
@@ -107,15 +102,15 @@ autocmd FileType vimwiki set foldmethod=expr
 autocmd FileType vimwiki set foldexpr=VimwikiFoldLevelCustom(v:lnum)
 autocmd FileType vimwiki IndentGuidesDisable
 
-hi VimwikiHeader1 gui=bold guifg=#FA8419
-hi VimwikiHeader2 gui=bold guifg=#4377FE
-hi VimwikiHeader3 gui=bold guifg=#FFFF43
-hi VimwikiHeader4 gui=bold guifg=#9C64FE
-hi VimwikiHeader5 gui=bold guifg=#97E023
-hi VimwikiHeader6 gui=bold guifg=#FF1919
+hi VimwikiHeader1 cterm=bold gui=bold guifg=#FA8419
+hi VimwikiHeader2 cterm=bold gui=bold guifg=#4377FE
+hi VimwikiHeader3 cterm=bold gui=bold guifg=#FFFF43
+hi VimwikiHeader4 cterm=bold gui=bold guifg=#9C64FE
+hi VimwikiHeader5 cterm=bold gui=bold guifg=#97E023
+hi VimwikiHeader6 cterm=bold gui=bold guifg=#FF1919
 
-hi VimwikiLink gui=underline guifg=#4377FE
-hi textSnipTEX gui=bold guifg=#FF0055
+hi VimwikiLink cterm=underline gui=underline guifg=#4377FE
+hi textSnipTEX cterm=bold gui=bold guifg=#FF0055
 
 function! VimwikiFoldLevelCustom(lnum) " {{{
   let pounds = strlen(matchstr(getline(a:lnum), '^#\+'))
@@ -136,6 +131,11 @@ let g:airline_theme='distinguished'
 
 " fish
 autocmd FileType fish compiler fish
+
+" indent guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 1
+let g:indent_guides_guide_size = 1
 
 " gpg
 let g:GPGFilePattern = '*.\(gpg\|asc\|pgp\)\(.wiki\)\='
