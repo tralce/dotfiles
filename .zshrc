@@ -83,16 +83,16 @@ do
 done
 # }}}
 # editor {{{
-if which nvim &> /dev/null
+if which vim &> /dev/null
+then
+  export EDITOR=vim
+  export VISUAL=vim
+elif which nvim &> /dev/null
 then
   export EDITOR=nvim
   export VISUAL=nvim
   alias vim="nvim"
   alias vimdiff="nvim -d"
-elif which vim &> /dev/null
-then
-  export EDITOR=vim
-  export VISUAL=vim
 elif which micro &> /dev/null
 then
   export EDITOR=micro

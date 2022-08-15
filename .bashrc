@@ -56,16 +56,16 @@ export PATH="$(echo $PATH|tr ':' '\n'|sed '/^$/d'|awk '!x[$0]++'|tr '\n' ':')"
 # }}}
 
 # editor {{{
-if which nvim &> /dev/null
+if which vim &> /dev/null
+then
+  export EDITOR=vim
+  export VISUAL=vim
+elif which nvim &> /dev/null
 then
   export EDITOR=nvim
   export VISUAL=nvim
   alias vim="nvim"
   alias vimdiff="nvim -d"
-elif which vim &> /dev/null
-then
-  export EDITOR=vim
-  export VISUAL=vim
 elif which micro &> /dev/null
 then
   alias vim="micro"
