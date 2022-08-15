@@ -45,6 +45,10 @@ noremap <LeftDrag> <LeftMouse>
 noremap! <LeftDrag> <LeftMouse>
 " }}}
 
+" cursor - https://stackoverflow.com/questions/6488683/how-to-change-the-cursor-between-normal-and-insert-modes-in-vim
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
 filetype plugin indent on
 " highlight CursorLineNR ctermbg=red
 highlight clear CursorLine
