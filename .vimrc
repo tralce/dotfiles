@@ -68,7 +68,7 @@ set scrolloff=999
 set showcmd
 set showmatch
 set termguicolors
-syntax enable
+syntax on
 
 if has("gui_running")
   set guioptions -=m
