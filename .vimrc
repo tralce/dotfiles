@@ -7,6 +7,7 @@ silent! call plug#begin('~/.vim/plugged')
 " Plug 'lervag/wiki-ft.vim'
 " Plug 'lervag/wiki.vim'
 " Plug 'tpope/vim-eunuch'
+Plug 'chrisbra/colorizer'
 Plug 'dag/vim-fish'
 Plug 'dense-analysis/ale'
 Plug 'dhruvasagar/vim-table-mode'
@@ -16,7 +17,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'masukomi/vim-markdown-folding'
 Plug 'mbbill/undotree'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'norcalli/nvim-colorizer.lua'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'ralismark/opsort.vim'
 Plug 'tralce/vim-airline-themes'
@@ -86,7 +87,7 @@ endfun
 " plugin settings {{{
 if has("nvim")
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  lua require'colorizer'.setup()
+  "lua require'colorizer'.setup()
 endif
 
 " vimwiki {{{
@@ -128,6 +129,10 @@ endfunction " }}}
 
 " airline
 let g:airline_theme='distinguished'
+
+" colorizer
+" let g:colorizer_auto_color = 1
+let g:colorizer_auto_filetype='vim'
 
 " fish
 autocmd FileType fish compiler fish
