@@ -3,7 +3,6 @@
 #merge = Name *.sh -> tmux split-pane nvim -d CURRENT1 CURRENT2
 #merge = Name .* -> tmux split-pane nvim -d CURRENT1 CURRENT2
 diff = colordiff -u CURRENT1 CURRENT2
-# preferpartial = Name {stats.json} -> /home/tralce/Documents
 
 confirmmerge = true
 log = false
@@ -12,10 +11,6 @@ sshargs = -C -o ConnectTimeout=10
 #ui = text
 xferbycopying = true
 
-#follow = Name {crypt.hc}
-#ignore = Path {.git}
-#ignore = Path {iCloud Photos}
-#ignore = Path {typus42/Screenshots}
 ignore = Name {,.}*{.bak}
 ignore = Name {,.}*{.cachedmsg}
 ignore = Name {,.}*{.crdownload}
@@ -65,6 +60,7 @@ ignore = Path {FeedbackHub}
 ignore = Path {GPUCache/index}
 ignore = Path {Garmin}
 ignore = Path {IncomingTorrents}
+ignore = Path {Launcher/launcher.settings}
 ignore = Path {Lightshot}
 ignore = Path {Photos Library.photoslibrary}
 ignore = Path {Radeon ReLive}
@@ -76,6 +72,8 @@ ignore = Path {SnappyDriverInstaller/update}
 ignore = Path {Splashtop Business}
 ignore = Path {System Volume Information}
 ignore = Path {Telltale Games/Tales from the Borderlands/Net}
+ignore = Path {The Elder Scrolls Online/game/client/eso64.dxvk-cache}
+ignore = Path {The Elder Scrolls Online/game/client/eso64.exe:1}
 ignore = Path {Torrents_Incomplete}
 ignore = Path {Torrents}
 ignore = Path {Uplay}
@@ -95,13 +93,9 @@ ignore = Path {iMovie Theater.theater}
 ignore = Path {iPod Photo Cache}
 ignore = Path {live}
 ignore = Path {random_seed}
+ignore = Path {stats}
 ignore = Path {tralce/SavedVariables/ZO_Ingame.lua}
 ignore = Path {typus42/AddOns}
 ignore = Path {wtu/AddOns}
 ignore = Path {wtu/Screenshots}
 ignorenot = Name {ChatLog.log}
-
-ignore = Path {Launcher/launcher.settings}
-ignore = Path {The Elder Scrolls Online/game/client/eso64.dxvk-cache}
-ignore = Path {The Elder Scrolls Online/game/client/eso64.exe:1}
-ignore = Path {stats}
