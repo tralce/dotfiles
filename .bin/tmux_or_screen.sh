@@ -4,7 +4,7 @@ if which zellij &> /dev/null
 then
   if [ -z "$ZELLIJ" -a -z "$SUDO_UID" ]
   then
-    zellij attach --create "$(hostname -s)"
+    zellij --layout compact attach --create "$(hostname -s)"
   fi
 elif which tmux &> /dev/null
 then
