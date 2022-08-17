@@ -643,7 +643,7 @@ ui:
     rounded_corners: true
 themes:
   default:
-    bg: "#000000"
+    bg: "#696969"
     red: "#FF1919"
     green: "#699c16"
     yellow: "#FFFF43"
