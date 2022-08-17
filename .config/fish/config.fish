@@ -100,10 +100,7 @@ end
 #end
 # }}}
 # editor {{{
-if which vim &> /dev/null
-  set -x EDITOR vim
-  set -x VISUAL vim
-else if which nvim &> /dev/null
+if which nvim &> /dev/null
   function vim --wraps=nvim --description 'alias vim=nvim'
     nvim $argv;
   end
@@ -112,6 +109,9 @@ else if which nvim &> /dev/null
   end
   set -x EDITOR nvim
   set -x VISUAL nvim
+else if which vim &> /dev/null
+  set -x EDITOR vim
+  set -x VISUAL vim
 else if which micro &> /dev/null
   set -x EDITOR micro
   set -x VISUAL micro
