@@ -13,7 +13,7 @@ set -U fish_color_end brmagenta
 set -U fish_color_error brred
 set -U fish_color_escape brred
 set -U fish_color_host brgreen
-set -U fish_color_host_remote green
+set -U fish_color_host_remote red
 set -U fish_color_keyword brmagenta
 set -U fish_color_match brred --background brblack
 set -U fish_color_normal brwhite
