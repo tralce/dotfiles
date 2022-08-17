@@ -650,7 +650,7 @@ themes:
     blue: "#4377fe"
     magenta: "#f3005f"
     orange: "#fa8419"
-    fg: "#252525"
+    fg: "#505050"
     cyan: "#66d9ef"
     black: "#000000"
     white: "#cccccc"
