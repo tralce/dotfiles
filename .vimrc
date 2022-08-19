@@ -180,6 +180,9 @@ command! W w
 command! Q q
 command! Wq wq
 command! WQ wq
+command! Wa wa
+command! WA wa
+command! Wqa wqa
 command! Cls  :let @/ = ""
 command! Comp g/\[X\]\|\[-\]\| ✓ \|[✓]/m$|:Cls
 command! Uncomp %s/\[.\]\|\[o\]\|\[O\]\|\[X\]\|\[-\]/\[ \]/g|:Cls
