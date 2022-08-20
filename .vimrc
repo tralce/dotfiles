@@ -2,7 +2,8 @@
 
 " vim-plug {{{
 silent! call plug#begin('~/.vim/plugged')
-Plug 'gko/vim-coloresque'
+Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'gko/vim-coloresque'
 Plug 'dag/vim-fish'
 Plug 'dense-analysis/ale'
 Plug 'dhruvasagar/vim-table-mode'
@@ -85,6 +86,7 @@ endfun
 " plugin settings {{{
 if has("nvim")
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  lua require'colorizer'.setup()
 endif
 
 " vimwiki {{{
