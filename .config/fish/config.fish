@@ -188,7 +188,7 @@ test -e $HOME/.bin-trust/aliases-trust.sh;and source $HOME/.bin-trust/aliases-tr
 # }}}
 
 # tmux and splash {{{
-status is-interactive;and test "$TERM != linux";and test -n "$SSH_CLIENT";and ~/.bin-local/multiplexer.sh
+status is-interactive;and test "$TERM != linux";and test -n "$SSH_CLIENT";and ~/.bin/multiplexer.sh
 
 set fish_greeting (set_color ff0055)$configver on $(uname -srm 2> /dev/null ) $(uptime -p 2> /dev/null || uptime) \(fish\)
 # }}}
