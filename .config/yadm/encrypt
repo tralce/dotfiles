@@ -5,3 +5,4 @@
 .ssh/pem/*
 .ssh/config-*
 .vpn_configs/*
+.local/share/remmina/*

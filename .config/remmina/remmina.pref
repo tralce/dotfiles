@@ -1,12 +1,10 @@
 [remmina_pref]
 secret=iHmbCn/GhBkGUk2Q+k/rOidJ2GwavV/Q5Wd+6Ss7qIk=
-datadir_path=/home/tralce/Documents/Backups/remmina/
 remmina_file_name=%G_%P_%N_%h
 screenshot_path=/home/tralce
 screenshot_name=remmina_%p_%h_%Y%m%d-%H%M%S
 deny_screenshot_clipboard=true
 save_view_mode=true
-use_master_password=false
 unlock_timeout=0
 unlock_password=
 trust_all=false
@@ -27,8 +25,8 @@ small_toolbutton=false
 view_file_mode=0
 resolutions=640x480,800x600,1024x768,1152x864,1280x960,1400x1050
 keystrokes=Send hello world§hello world\\n
-main_width=958
-main_height=1009
+main_width=775
+main_height=798
 main_maximize=false
 main_sort_column_id=2
 main_sort_order=0
@@ -84,6 +82,13 @@ rdp_quality_9=80
 rdp_deviceScaleFactor=0
 rdp_desktopScaleFactor=0
 rdp_desktopOrientation=0
+datadir_path=
+confirm_close=true
+use_primary_password=false
+lock_connect=false
+lock_edit=false
+enc_mode=1
+audit=false
 
 [ssh_colors]
 background=rgb(213,204,186)
