@@ -32,7 +32,7 @@ starttime=$(date +%s)
 bye() {
   endtime=$(date +%s)
   echocolor blue "did $counter jobs in $(( (endtime-starttime) / 60 )) minutes, $(( (endtime-starttime) % 60 )) seconds"
-  [ -n "$TMUX" ] &&   tmux setw automatic-rename on
+  [ -n "$TMUX" ] && tmux setw automatic-rename on
   exit "$1"
 }
 
@@ -76,7 +76,8 @@ runBackup() {
   do
     exitcode=
     echocolor $rdmclr "$dest/$job"
-    [ -n "$TMUX" ] && tmux rename-window "backup.sh - $friendlyName/$job"
+    [ -n "$TMUX" ] && tmux rename-window "backup.sh - ${friendlyName}/${job}"
+    [ -n "$ZELLIJ" ] && echo -ne "\033]0;backup.sh - ${friendlyName}/${job}\007"
     if [ "$job" = "MiscBackups" ]
     then
       optFastCheckold=$optFastCheck
