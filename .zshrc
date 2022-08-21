@@ -167,7 +167,7 @@ PROMPT="${rngstatus}%F{$strcolor}%n%F{cyan}@%F{green}%m%F{blue} %~ ${ret_status}
 # tmux and splash {{{
 if [[ $- =~ i ]]
 then
-  [ -n "$SSH_CLIENT" ] && [ -f $HOME/.bin/tmux_or_screen.sh ] && $HOME/.bin/tmux_or_screen.sh
+  [ -n "$SSH_CLIENT" ] && [ -f $HOME/.bin-local/multiplexer.sh ] && $HOME/.bin-local/multiplexer.sh
   echo "$(tput setaf 197)$zshrcver on $(uname -srm 2> /dev/null) $(uptime -p 2> /dev/null || uptime) (zsh)"
 fi
 # }}}
