@@ -247,7 +247,7 @@ do_eli() {
   ips=(172.21.2.3)
   ports=(22 48000)
   user="tralce"
-  runBackup .eso Documents Downloads ESO ISOs Pictures SourceSoftware USB_Toolkits Videos ventoy
+  runBackup .eso Documents Downloads ESO ISOs Pictures SourceSoftware USB_Toolkits ventoy
 }
 
 do_isaac() {
