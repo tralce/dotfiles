@@ -250,7 +250,7 @@ globalkeys = gears.table.join(
  awful.key({ modkey, }, "Tab",function () awful.client.focus.history.previous() if client.focus then client.focus:raise() end end, {description = "go back", group = "client"}),
 
  -- custom launchers
- awful.key({ modkey, }, "n", function () awful.spawn("neovide +VimwikiIndex") end, {description = "open Vimwiki", group = "launcher"}),
+ awful.key({ modkey, }, "n", function () awful.spawn("kitty nvim +VimwikiIndex") end, {description = "open Vimwiki", group = "launcher"}),
  awful.key({ modkey, "Shift" }, "l", function () awful.spawn("kitty cmatrix -C magenta") end, {description = "open cmatrix", group = "launcher"}),
  awful.key({ modkey, }, "c", function () awful.spawn("qalculate-gtk") end, {description = "open qalculate-gtk", group = "launcher"}),
  awful.key({ modkey, }, "v", function () awful.spawn("kitty pulsemixer") end, {description = "open pulsemixer", group = "launcher"}),

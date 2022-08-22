@@ -27,7 +27,7 @@ alias update_sysyadm="sysyadm pull && sysyadm add -u && sysyadm commit -m "$(uui
 alias update_yadm="yadm pull && yadm add -u && yadm commit -m "$(uuidgen)" && yadm push"
 alias updatedb="checkroot updatedb"
 alias vupd="vim +PlugInstall +PlugUpdate! +PlugUpgrade +PlugClean +qa"
-alias vw="vim -c VimwikiIndex"
+alias vw="nvim +VimwikiIndex"
 alias wasabi="aws --profile wasabi --endpoint-url=https://s3.wasabisys.com s3"
 alias wasabidgc="aws --profile wasabi-dgc --endpoint-url=https://s3.wasabisys.com s3"
 #test -f /etc/issue && alias piversion="grep -q Revision /proc/cpuinfo && curl -L perturb.org/rpi?rev=$(awk '/^Revision/ { print $3 }' /proc/cpuinfo)"
