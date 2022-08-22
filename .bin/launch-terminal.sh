@@ -2,7 +2,7 @@
 
 options=
 
-for te in kitty terminator xterm
+for te in alacritty kitty terminator gnome-terminal urxvt xterm
 do
   if which $te &> /dev/null
   then
