@@ -11,5 +11,5 @@ function run {
 }
 
 run ~/.bin/monitor_downloads.sh
-run xcompmgr -c
+run xcompmgr -cf
 run synergyc 172.21.2.3
