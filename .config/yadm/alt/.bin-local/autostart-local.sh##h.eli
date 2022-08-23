@@ -16,7 +16,8 @@ run ~/.bin/monitor_downloads.sh
 run discover-overlay
 run discord --start-minimized
 run openrgb -p tralce
-run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
+# run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
+run xcompmgr -cf
 run steam -silent
 run synergys
 run xbindkeys
