@@ -202,7 +202,7 @@ do_alyx() {
   ports=(22 48000)
   user="tralce"
   dirWin="y:"
-  runBackup .eso Documents Downloads ESO ISOs MiscBackups Pictures SourceSoftware
+  runBackup Documents Downloads ESO ISOs MiscBackups Pictures SourceSoftware
 }
 
 do_adrian() {
@@ -232,7 +232,7 @@ do_odessa() {
   filebase="$HOME/OtherPeoplesBackups/Nicole"
   runBackup Documents Downloads Music Pictures Videos
   friendlyName="odessa"
-  runBackup .eso ESO Pictures/Wallpapers
+  runBackup ESO Pictures/Wallpapers
 }
 
 do_arne() {
@@ -259,7 +259,7 @@ do_isaac() {
   filebase="$HOME/OtherPeoplesBackups/Nicole"
   runBackup Documents Downloads Music Pictures Videos
   friendlyName="isaac"
-  runBackup .eso ESO Pictures/Wallpapers
+  runBackup ESO Pictures/Wallpapers
 }
 # }}}
 
