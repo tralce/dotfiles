@@ -153,9 +153,9 @@ nmap <leader>rg :Rg<cr>
 " }}}
 
 " backup, swap, and undo {{{
+silent !mkdir /tmp/vim &> /dev/null
 " backup {{{
-silent !mkdir $HOME/.vimtemp &> /dev/null
-set backupdir=$HOME/.vimtemp/backup//
+set backupdir=/tmp/vim/backup//
 if !isdirectory(&backupdir)
   call mkdir(&backupdir)
 endif
@@ -163,13 +163,13 @@ set backupcopy=yes
 set backup
 " }}}
 " swap {{{
-set directory=$HOME/.vimtemp/swap//
+set directory=/tmp/vim/swap//
 if !isdirectory(&directory)
   call mkdir(&directory)
 endif
 " }}}
 " undo {{{
-set undodir=$HOME/.vimtemp/undo//
+set undodir=/tmp/vim/undo//
 if !isdirectory(&undodir)
   call mkdir(&undodir)
 endif
