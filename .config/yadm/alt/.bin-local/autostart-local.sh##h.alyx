@@ -32,6 +32,7 @@ xinput disable "ELAN Touchscreen"
 (while true;do razer.py;sleep 15;done) &
 
 run ~/.bin/monitor_downloads.sh
+run picom
 # run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx --blur-background --blur-kern 7x7box
-run xcompmgr -fc
+# run xcompmgr -fc
 run synergyc 172.21.2.3
