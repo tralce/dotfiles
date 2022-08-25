@@ -169,7 +169,7 @@ rounded-corners-exclude = [
 # Bad in performance, with driver-dependent behavior.
 # The name of the switch may change without prior notifications.
 #
-blur-background = true
+# blur-background = true
 
 
 # Blur background of windows when the window frame is not opaque.
@@ -189,7 +189,7 @@ blur-background = true
 #   blur-kern = "5,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1";
 #
 # blur-kern = ""
-blur-kern = "7x7box";
+# blur-kern = "7x7box";
 
 
 # Exclude conditions for background blur.
