@@ -16,4 +16,4 @@ synclient VertScrollDelta=-150
 
 run synergyc 172.21.2.15
 
-run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
+run picom

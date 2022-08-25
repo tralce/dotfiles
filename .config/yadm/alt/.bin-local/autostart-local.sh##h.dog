@@ -10,6 +10,6 @@ function run {
   fi
 }
 
-run picom -cCGb -m 0.95 -i 0.95 --vsync --backend glx
+run picom
 run synergyc 172.21.2.3
 

@@ -11,5 +11,5 @@ function run {
 }
 
 run synergyc 172.21.2.3
-run picom -cCGb -i 1
+run picom
 run firefox --kiosk http://overwatch.eclart.xyz/arne.html

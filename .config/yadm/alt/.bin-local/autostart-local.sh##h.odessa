@@ -15,7 +15,7 @@ xmodmap -e 'keycode 135='
 synclient HorizScrollDelta=-30
 synclient VertScrollDelta=-30
 
-run picom -cCGb -i 0.95 --vsync --backend glx
+run picom
 run steam -silent
 run discord --start-minimized
 
