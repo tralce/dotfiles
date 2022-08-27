@@ -65,8 +65,8 @@ root: (T: ${fs_size /}) (U: ${fs_used /}) (F: ${fs_free /})
 ${fs_bar 4 /}
 home: (T: ${fs_size /home}) (U: ${fs_used /home}) (F: ${fs_free /home})
 ${fs_bar 4 /home}
-wn11: (T: ${fs_size /wn11}) (U: ${fs_used /wn11}) (F: ${fs_free /wn11})
-${fs_bar 4 /wn11}
+${if_mounted /wn11}wn11: (T: ${fs_size /wn11}) (U: ${fs_used /wn11}) (F: ${fs_free /wn11})
+${fs_bar 4 /wn11}${endif}
 
 ${exec /home/tralce/.bin/freespace.sh}
 
