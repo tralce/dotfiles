@@ -3,6 +3,6 @@ Encoding=UTF-8
 Version=1.0
 Type=Application
 Terminal=false
-Exec=/usr/bin/alacritty sc-im %f
+Exec=/usr/bin/alacritty -e sc-im %f
 Name=sc-im
 Icon=kitty
