@@ -21,36 +21,36 @@ DEFINE_COLOR "magenta" 255 0 83
 DEFINE_COLOR "black" 32 32 32
 DEFINE_COLOR "red" 255 25 25
 DEFINE_COLOR "green" 106 167 8
-# DEFINE_COLOR "transparent" 0 0 0
+DEFINE_COLOR "transparent" 0 0 0
 DEFINE_COLOR "yellow" 255 255 67
 DEFINE_COLOR "blue" 67 119 254
 DEFINE_COLOR "cyan" 102 217 239
 DEFINE_COLOR "white" 248 248 248
 
 #      type                   foreground  background        style
-color "type=CELL_CONTENT      fg=cyan     bg=DEFAULT_COLOR  bold=1  "
-color "type=CELL_ERROR        fg=red      bg=DEFAULT_COLOR  bold=1  "
-color "type=CELL_FORMAT       fg=red      bg=DEFAULT_COLOR          "
-color "type=CELL_ID           fg=white    bg=DEFAULT_COLOR  bold=1  "
-color "type=CELL_NEGATIVE     fg=green    bg=DEFAULT_COLOR          "
-color "type=CELL_SELECTION    fg=black    bg=magenta        bold=0  "
-color "type=CELL_SELECTION_SC fg=magenta  bg=black          bold=1  "
-color "type=DATEF             fg=yellow   bg=DEFAULT_COLOR          "
-color "type=DEFAULT           fg=white    bg=DEFAULT_COLOR          "
-color "type=ERROR_MSG         fg=white    bg=red            bold=1  "
-color "type=EXPRESSION        fg=red      bg=DEFAULT_COLOR          "
-color "type=GRID_EVEN         fg=white    bg=DEFAULT_COLOR          "
-color "type=GRID_ODD          fg=white    bg=DEFAULT_COLOR          "
-color "type=HEADINGS          fg=yellow   bg=black          bold=0  "
-color "type=HEADINGS_ODD      fg=yellow   bg=black          bold=0  "
-color "type=HELP_HIGHLIGHT    fg=black    bg=white                  "
-color "type=INFO_MSG          fg=cyan     bg=DEFAULT_COLOR  bold=1  "
-color "type=INPUT             fg=white    bg=DEFAULT_COLOR          "
-color "type=MODE              fg=white    bg=DEFAULT_COLOR  bold=1  "
-color "type=NORMAL            fg=white    bg=DEFAULT_COLOR          "
-color "type=NUMB              fg=cyan     bg=DEFAULT_COLOR          "
-color "type=STRG              fg=blue     bg=DEFAULT_COLOR  bold=0  "
-color "type=WELCOME           fg=yellow   bg=DEFAULT_COLOR  bold=0  "
+color "type=CELL_CONTENT      fg=cyan     bg=transparent  bold=1  "
+color "type=CELL_ERROR        fg=red      bg=transparent  bold=1  "
+color "type=CELL_FORMAT       fg=red      bg=transparent          "
+color "type=CELL_ID           fg=white    bg=transparent  bold=1  "
+color "type=CELL_NEGATIVE     fg=green    bg=transparent          "
+color "type=CELL_SELECTION    fg=black    bg=magenta      bold=0  "
+color "type=CELL_SELECTION_SC fg=magenta  bg=black        bold=1  "
+color "type=DATEF             fg=yellow   bg=transparent          "
+color "type=DEFAULT           fg=white    bg=transparent          "
+color "type=ERROR_MSG         fg=white    bg=red          bold=1  "
+color "type=EXPRESSION        fg=red      bg=transparent          "
+color "type=GRID_EVEN         fg=white    bg=transparent          "
+color "type=GRID_ODD          fg=white    bg=transparent          "
+color "type=HEADINGS          fg=yellow   bg=black        bold=0  "
+color "type=HEADINGS_ODD      fg=yellow   bg=black        bold=0  "
+color "type=HELP_HIGHLIGHT    fg=black    bg=white                "
+color "type=INFO_MSG          fg=cyan     bg=transparent  bold=1  "
+color "type=INPUT             fg=white    bg=transparent          "
+color "type=MODE              fg=white    bg=transparent  bold=1  "
+color "type=NORMAL            fg=white    bg=transparent          "
+color "type=NUMB              fg=cyan     bg=transparent          "
+color "type=STRG              fg=blue     bg=transparent  bold=0  "
+color "type=WELCOME           fg=yellow   bg=transparent  bold=0  "
 
 # set command_timeout=3000
 # set copy_to_clipboard_delimited_tab=0

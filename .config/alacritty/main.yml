@@ -35,6 +35,6 @@ colors:
     magenta: '#fd28ff'
     cyan:    '#14ffff'
     white:   '#ffffff'
-  transparent_background_colors: false
+  transparent_background_colors: true
 
 
