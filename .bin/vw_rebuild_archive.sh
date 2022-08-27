@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd "$HOME/Documents/vw/tech/archived_scripts/" || exit 1
+cd "$HOME/.vimwiki/tech/archived_scripts/" || exit 1
 
 [ ! -f " index/wiki" ] && touch index.wiki
 
@@ -15,7 +15,7 @@ do
 done
 
 
-cd "$HOME/Documents/vw/tech/archived_configs/" || exit 1
+cd "$HOME/.vimwiki/tech/archived_configs/" || exit 1
 
 [ ! -f " index/wiki" ] && touch index.wiki
 
