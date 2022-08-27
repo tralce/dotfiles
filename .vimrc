@@ -103,9 +103,9 @@ autocmd FileType vimwiki set foldexpr=VimwikiFoldLevelCustom(v:lnum)
 autocmd FileType vimwiki IndentGuidesDisable
 
 hi VimwikiHeader1 cterm=bold gui=bold guifg=#FA8419
-hi VimwikiHeader2 cterm=bold gui=bold guifg=#4377FE
-hi VimwikiHeader3 cterm=bold gui=bold guifg=#FFFF43
-hi VimwikiHeader4 cterm=bold gui=bold guifg=#9C64FE
+hi VimwikiHeader2 cterm=bold gui=bold guifg=#9C64FE
+hi VimwikiHeader3 cterm=bold gui=bold guifg=#66d9ef
+hi VimwikiHeader4 cterm=bold gui=bold guifg=#FFFF43
 hi VimwikiHeader5 cterm=bold gui=bold guifg=#97E023
 hi VimwikiHeader6 cterm=bold gui=bold guifg=#FF1919
 
@@ -150,6 +150,7 @@ map <leader>ut :UndotreeToggle<CR>
 
 " fzf.vim
 nmap <leader>rg :Rg<cr>
+nmap <leader>fs :Files<cr>
 " }}}
 
 " backup, swap, and undo {{{
