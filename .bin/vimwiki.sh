@@ -22,7 +22,7 @@ pushd ~/.vimwiki
 if git pull
 then
   $EDITOR +VimwikiIndex
-  chmod -Rc a-xst+X,ug+rw,o-w+r ~/.vimwiki
+  chmod -Rc a-xst+X,ug+rw,o-w+r ~/.vimwiki/*
   git add -A ~/.vimwiki
   git commit -m $(uuidgen)
   git push
