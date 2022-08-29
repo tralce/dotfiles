@@ -85,7 +85,7 @@ runBackup() {
     fi
     unison $optTerse $optSyncMode $optFastCheck $optIgnoreArchives $optPerms $optTestServer $optExtra ${filebase:-$HOME}/$job $dest/$job
     exitcode=$?
-    chmod -R a-xst+X,ug+rw,o-w+r "$HOME"/$job
+    chmod -R a-xst+X,u+rw,go-w+r "$HOME"/$job
     if [ "$job" = "MiscBackups" ]
     then
       optFastCheck=$optFastCheckold

@@ -18,7 +18,7 @@ alias nosshnokey="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=n
 alias poweroff="checkroot poweroff"
 alias reboot="checkroot reboot"
 alias rename="rename -v"
-alias resetperms="chmod -R a-x+X,ug+rw,o-w+r"
+alias resetperms="chmod -R a-x+X,u+rw,go-w+r"
 alias shred="shred -vun50"
 alias sync_size="watch grep -e Dirty: -e Writeback: /proc/meminfo"
 alias sysyadm="sudo yadm --yadm-dir /etc/yadm --yadm-data /etc/yadm/data"

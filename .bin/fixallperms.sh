@@ -28,7 +28,7 @@ do
   then
     echocolor green "$HOME/$dir..."
     chown -R "$(id -un)":"$(id -gn)" "$HOME"/$dir
-    chmod -R a-xst+X,ug+rw,o-w+r "$HOME"/$dir
+    chmod -R a-xst+X,u+rw,go-w+r "$HOME"/$dir
   else
     echocolor red "$HOME/$dir does not exist. Skipping."
   fi

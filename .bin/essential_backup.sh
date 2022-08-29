@@ -21,13 +21,13 @@ backupcron() { # {{{
     mkdir -p $backupdir/cron/
     checkroot cp -rv /var/spool/cron/crontabs/* $backupdir/cron/
     checkroot chown -R $(whoami) $backupdir/cron/
-    chmod -R ug+rwx,o-w+rx $backupdir/
+    chmod -R a-xst+X,u+rw,og-w+r $backupdir/
   elif [ -d "/var/spool/cron/" ]
   then
     mkdir -p $backupdir/cron/
     checkroot cp -rv /var/spool/cron/* $backupdir/cron/
     checkroot chown -R $(whoami) $backupdir/cron/
-    chmod -R ug+rwx,o-w+rx $backupdir/
+    chmod -R a-xst+X,u+rw,og-w+r $backupdir/
   else
     echocolor red "Couldn't find crontabs in the usual places."
   fi
@@ -37,14 +37,14 @@ backupsystemd-boot() { # {{{
   echocolor green "Backing up systemd-boot..."
   mkdir -p $backupdir/systemd-boot
   cp -r /boot/loader/loader.conf /boot/loader/entries $backupdir/systemd-boot/
-  chmod -R ug+rwx,o-w+rx $backupdir/
+  chmod -R a-xst+X,u+rw,og-w+r $backupdir/
 } # }}}
 
 backupgrub() { # {{{
   echocolor green "Backing up grub..."
   mkdir -p $backupdir/grub
   cp -r /boot/grub/grub.cfg /etc/default/grub $backupdir/grub/
-  chmod -R ug+rwx,o-w+rx $backupdir/
+  chmod -R a-xst+X,u+rw,og-w+r $backupdir/
 } # }}}
 
 backupshellhist() {
@@ -53,21 +53,21 @@ backupshellhist() {
   [ -e $HOME/.bash_history ] && cp $HOME/.bash_history $backupdir/hist/bash_history
   [ -e $HOME/.histfile ] && cp $HOME/.histfile $backupdir/hist/zsh_history
   [ -e $HOME/.local/share/fish/fish_history ] && cp $HOME/.local/share/fish/fish_history $backupdir/hist/fish_history
-  chmod -R ug+rwx,o-w+rx $backupdir/
+  chmod -R a-xst+X,u+rw,og-w+r $backupdir/
 }
 
 backupsyslinux() { # {{{
   echocolor green "Backing up syslinux..."
   mkdir -p $backupdir/syslinux
   cp -r /boot/syslinux/syslinux.cfg $backupdir/syslinux/
-  chmod -R ug+rwx,o-w+rx $backupdir/
+  chmod -R a-xst+X,u+rw,og-w+r $backupdir/
 } # }}}
 
 backupfstab() { # {{{
   echocolor green "Backing up fstab..."
   mkdir -p $backupdir/
   cat /etc/fstab |tee $backupdir/fstab-$(date +%Y.%m.%d)
-  chmod -R ug+rwx,o-w+rx $backupdir/
+  chmod -R a-xst+X,u+rw,og-w+r $backupdir/
 } # }}}
 
 backupssh() { # {{{
@@ -77,7 +77,7 @@ backupssh() { # {{{
   checkroot cp -v /etc/ssh/ssh* $backupdir/ssh-etc/
   cp -v $HOME/.ssh/* $backupdir/ssh-home/
   checkroot chown -R $(whoami) $backupdir/ssh-etc/
-  chmod -R ug+rwx,o-w+rx $backupdir/
+  chmod -R a-xst+X,u+rw,og-w+r $backupdir/
 } # }}}
 
 essential_backup() { # {{{
