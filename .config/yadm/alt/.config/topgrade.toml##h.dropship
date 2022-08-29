@@ -29,13 +29,13 @@
 #tmux_arguments = "-S /var/tmux.sock"
 
 # Do not set the terminal title
-#set_title = false
+set_title = true
 
 # Display the time in step titles
-# display_time = true
+display_time = true
 
 # Cleanup temporary or old files
-#cleanup = true
+cleanup = true
 
 [git]
 #max_concurrency = 5

@@ -35,7 +35,7 @@ set_title = true
 display_time = true
 
 # Cleanup temporary or old files
-cleanup = true
+# cleanup = true
 
 [git]
 #max_concurrency = 5
