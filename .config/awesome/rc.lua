@@ -253,7 +253,7 @@ globalkeys = gears.table.join(
  awful.key({ modkey, }, "n", function () awful.spawn("alacritty -e vimwiki.sh") end, {description = "open Vimwiki", group = "launcher"}),
  awful.key({ modkey, "Shift" }, "l", function () awful.spawn("kitty cmatrix -C magenta") end, {description = "open cmatrix", group = "launcher"}),
  awful.key({ modkey, }, "c", function () awful.spawn("qalculate-gtk") end, {description = "open qalculate-gtk", group = "launcher"}),
- awful.key({ modkey, }, "v", function () awful.spawn("kitty pulsemixer") end, {description = "open pulsemixer", group = "launcher"}),
+ awful.key({ modkey, }, "v", function () awful.spawn("alacritty -e pulsemixer") end, {description = "open pulsemixer", group = "launcher"}),
  awful.key({ modkey, }, "u", function () awful.spawn("slack") end, {description = "open slack", group = "launcher"}),
  awful.key({ modkey, }, "t", function () awful.spawn(terminal) end, {description = "open a terminal", group = "launcher"}),
  awful.key({ modkey, }, "r", function () awful.spawn(launchtool) end, {description = "open rofi", group = "launcher"}),

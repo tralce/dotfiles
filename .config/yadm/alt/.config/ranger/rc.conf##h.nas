@@ -766,6 +766,7 @@ copytmap <ESC> q Q w <C-c>
 map     cotz    shell tar caf %f.tar.zst %f
 map     cotg    shell tar caf %f.tar.gz %f
 map     cotb    shell tar caf %f.tar.bz2 %f
+map     coz     shell zip -r %f.zip %f
 map     co7     shell 7z a %f.7z %f
 map     dif     shell vimdiff %s
 map     du      shell gdu %s
