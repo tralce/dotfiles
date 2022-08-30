@@ -165,7 +165,7 @@ do_eso() {
       eli)    friendlyName="eli";ips=(172.21.2.3);ports=(22 48000);user="tralce";;
       alyx)   friendlyName="alyx";dirWin="y:";ips=(172.21.2.5 172.21.2.15);ports=(22 48000);user="tralce";;
       isaac)  friendlyName="isaac";ips=(172.21.2.4);ports=(22 48000);user="nhadley";;
-      dog)    friendlyName="dog";ips=(172.21.2.12);ports=(22 48000);user="tralce";;
+      dog)    friendlyName="dog";ips=(172.21.2.12);ports=(22 48000);user="Administrator";;
       odessa) friendlyName="odessa";ips=(172.21.2.14 172.21.2.13);ports=(22 48000);user="nhadley";;
     esac
   runBackup ESO
@@ -177,7 +177,7 @@ do_gman() {
   ips=(172.21.2.2)
   ports=(22)
   user="tralce"
-  runBackup Documents Downloads ISOs Pictures SourceSoftware
+  runBackup Documents Downloads Pictures SourceSoftware
 }
 
 do_barney() {
@@ -220,7 +220,7 @@ do_dog() {
   friendlyName="dog"
   ips=(172.21.2.12)
   ports=(22 48000)
-  user="tralce"
+  user="Administrator"
   runBackup Documents Downloads ESO Pictures/Wallpapers
 }
 
