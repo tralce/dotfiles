@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Updating price table..."
+temp=$(mktemp)
+curl -o $temp 'https://us.tamrieltradecentre.com/download/PriceTable'
+unzip -o $temp -d ~/ESO/tralce/AddOns/TamrielTradeCentre/
+rm $temp
+
+DISPLAY=:0.0 wine /home/tralce/.wine/drive_c/users/tralce/AppData/Local/Minion/Minion.exe
+
+chown -Rc "$(id -un)":"$(id -gn)" ~/ESO
+chmod -Rc a-xst+X,u+rw,og-w+r ~/ESO
