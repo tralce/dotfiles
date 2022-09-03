@@ -66,6 +66,7 @@ repos = [
 "Remove old packages" = "~/.bin/checkorphans.sh"
 "Remove AUR packages" = "~/.bin/check_aur_packages.sh"
 "Remove old vim plugins" = "vim +PlugClean +qa"
+"Check netdata" = "pgrep netdata && exit 1 || exit 0"
 
 [brew]
 #greedy_cask = true
