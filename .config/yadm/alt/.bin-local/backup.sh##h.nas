@@ -202,7 +202,7 @@ do_alyx() {
   ports=(22 48000)
   user="tralce"
   dirWin="y:"
-  runBackup .local/share/PolyMC/instances Documents Downloads ESO ISOs MiscBackups Pictures SourceSoftware
+  runBackup .local/share/PolyMC/instances .minion Documents Downloads ESO ISOs MiscBackups Pictures SourceSoftware
 }
 
 do_adrian() {
@@ -248,7 +248,7 @@ do_eli() {
   ips=(172.21.2.3)
   ports=(22 48000)
   user="tralce"
-  runBackup .eso .local/share/PolyMC/instances Documents Downloads ESO ISOs Pictures SourceSoftware USB_Toolkits ventoy
+  runBackup .eso .local/share/PolyMC/instances .minion Documents Downloads ESO ISOs Pictures SourceSoftware USB_Toolkits ventoy
 }
 
 do_isaac() {
