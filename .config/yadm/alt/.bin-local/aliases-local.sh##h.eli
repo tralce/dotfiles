@@ -1,2 +1,2 @@
 # vim: syn=sh
-alias backup="~/.bin-local/minion.sh"
+alias minion="~/.bin-local/minion.sh"
